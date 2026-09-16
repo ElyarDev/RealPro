@@ -1,0 +1,81 @@
+.descover-section {
+    max-width: 130rem;
+    margin: 0 auto;
+}
+
+.descover {
+    padding: 6rem 0;
+
+    &__top {
+        padding: 4.2rem 0;
+
+        span {
+            font-size: 1.6rem;
+        }
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3.5rem;
+        margin-bottom: 8rem;
+    }
+
+    &__item {
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+        &__img {
+            width: 100%;
+        }
+
+        &__text-box {
+            padding: 2.2rem 0 0 2.2rem;
+        }
+
+        &__text {
+            margin-top: 1.2rem;
+            font-size: 1.6rem;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+        }
+    }
+
+    &__icon-box {
+        padding: 1.8rem 0 0 2.2rem;
+        display: flex;
+        align-items: center;
+        gap: 3.2rem;
+
+        span {
+            font-size: 1.6rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+    }
+
+    &__price-box {
+        padding: 2.8rem 0 0 2.2rem;
+        display: flex;
+        align-items: center;
+        gap: 1.8rem;
+        margin-bottom: 3.8rem;
+
+        span {
+            font-size: 2.4rem;
+            font-weight: bold;
+            color: $color-primary-light-2;
+        }
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

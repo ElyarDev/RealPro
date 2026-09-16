@@ -1,0 +1,39 @@
+.navbar-section {
+    max-width: 130rem;
+    margin: 0 auto;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+
+    &__logo {
+        width: 100%;
+    }
+
+    &__list {
+
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2.8rem;
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: $color-general-1;
+        }
+    }
+
+    &__btns {
+        display: flex;
+        gap: 2.4rem;
+        justify-content: center;
+        align-items: center;
+    }
+}

@@ -1,0 +1,52 @@
+.blog-section {
+    max-width: 130rem;
+    margin: 0 auto;
+}
+
+.blogs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.blog {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin-bottom: 4.6rem;
+
+    &__img {
+        width: 100%;
+    }
+
+    &__text-box {
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+        gap: 1.8rem;
+        padding: 3rem;
+    }
+
+    &__icon-box {
+        font-size: 1.6rem;
+        display: flex;
+        gap: 4.6rem;
+    }
+
+    &__icon {
+        display: flex;
+        align-items: center;
+    }
+
+    &__text {
+        margin-top: -1.2rem;
+        font-size: 1.6rem;
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.new-blog {}

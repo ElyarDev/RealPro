@@ -1,0 +1,28 @@
+.hero-section {
+    max-width: 130rem;
+    margin: 0 auto;
+}
+
+.hero {
+    padding: 5.6rem 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+
+    &__text-box {
+        span {
+            font-size: 2.2rem;
+            margin-bottom: -4rem;
+        }
+
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    &__img {
+        width: 75%;
+        margin-left: auto;
+        display: block;
+    }
+}

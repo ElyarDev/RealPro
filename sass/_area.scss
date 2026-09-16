@@ -1,0 +1,31 @@
+.area-section {
+    max-width: 130rem;
+    margin: 0 auto;
+}
+
+.area {
+    padding: 6rem 0;
+
+    &__top {
+        padding: 4.2rem 0;
+
+        span {
+            font-size: 1.6rem;
+        }
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__img-box-1 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 2.5rem;
+    }
+
+    &__img-box-2 {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+    }
+}

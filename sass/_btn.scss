@@ -1,0 +1,33 @@
+.btn {
+    outline: 0;
+    font-size: 1.6rem;
+    cursor: pointer;
+
+    &--transparent {
+        background: transparent;
+        border: none;
+    }
+
+    &--full {
+        border: none;
+        background-color: $color-primary-light-2;
+        padding: 1.4rem 3.2rem;
+        color: $color-white;
+        border-radius: 1rem;
+    }
+
+    &--outline {
+        border: 2px solid $color-primary-light-2;
+        color: $color-primary;
+        font-size: 1.4rem;
+        background-color: transparent;
+        padding: 0.8rem 1.6rem;
+        border-radius: 1rem;
+        transition: all 0.3s;
+
+        &:hover {
+            background-color: $color-primary;
+            color: $color-white;
+        }
+    }
+}

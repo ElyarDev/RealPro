@@ -1,0 +1,33 @@
+.agent-section {
+    max-width: 130rem;
+    margin: 0 auto;
+}
+
+.agent {
+    padding: 12.8rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.6rem;
+
+    &__text-box {
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+    }
+
+    &__title {
+        font-size: 1.6rem;
+        font-weight: bold;
+        color: $color-general-3;
+    }
+
+    &__description {
+        color: $color-general-3;
+        font-size: 1.6rem;
+    }
+
+    &__img-box {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
