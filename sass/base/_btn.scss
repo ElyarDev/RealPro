@@ -5,6 +5,8 @@
     cursor: pointer;
 
     &--transparent {
+        font-size: 1.8rem;
+        color: $color-general-3;
         position: relative;
         background: transparent;
         border: none;

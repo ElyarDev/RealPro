@@ -14,6 +14,8 @@ body {
   cursor: pointer;
 }
 .btn--transparent {
+  font-size: 1.8rem;
+  color: #636366;
   position: relative;
   background: transparent;
   border: none;
@@ -123,6 +125,87 @@ body {
   margin: 0;
 }
 
+.contact-section {
+  max-width: 130rem;
+  margin: 0 auto;
+}
+
+.contact {
+  padding: 8rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.contact__img-box img {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.contact__login-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  padding: 3rem;
+  border: 2px solid #B0B0B0;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.contact__login__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact__login__title {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: -1rem;
+}
+.contact__login__description {
+  font-size: 1.6rem;
+}
+.contact__login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contactmap-section {
+  max-width: 130rem;
+  margin: 0 auto;
+}
+
+.map {
+  padding: 12.8rem 0 5.6rem 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6rem;
+}
+.map__text-box {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.map__description {
+  margin-top: 1.5rem;
+  font-size: 1.8rem;
+  color: #636366;
+  letter-spacing: 0.6px;
+}
+.map__list {
+  margin-inline-start: 0;
+  list-style: none;
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+.map__img {
+  width: 100%;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  transition: all 0.3s;
+}
+.map__img:hover {
+  transform: scale(1.15);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
 .about-section {
   max-width: 130rem;
   margin: 0 auto;
@@ -138,6 +221,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 2rem;
 }
 
 .story-section {
@@ -163,6 +247,68 @@ body {
 .story__text {
   color: #636366;
   font-size: 1.6rem;
+}
+
+.team-section {
+  max-width: 130rem;
+  margin: 0 auto;
+}
+
+.team {
+  padding: 3rem 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.8rem;
+}
+
+.vision-section {
+  max-width: 130rem;
+  margin: 0 auto;
+}
+
+.vision {
+  padding: 9.6rem 0 8rem 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.8rem;
+}
+.vision__header {
+  text-align: center;
+  padding-top: 6rem;
+}
+.vision__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.vision__icon-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  padding: 3rem 0;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  margin-bottom: 2.5rem;
+  transition: all 0.2s;
+}
+.vision__icon-box:hover {
+  transform: rotate(-8deg) scale(1.1);
+}
+.vision__text-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+.vision__title {
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+.vision__description {
+  font-size: 1.6rem;
+  color: #636366;
+  text-align: center;
 }
 
 .agents {

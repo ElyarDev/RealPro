@@ -10,22 +10,12 @@
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
 
-
-    // ==============================
-    // TEXT BOX
-    // ==============================
-
     &__text-box {
         display: flex;
         flex-direction: column;
         align-items: start;
         gap: 2.8rem;
     }
-
-
-    // ==============================
-    // SUBTITLE
-    // ==============================
 
     &__subtitle {
         font-size: 2.2rem;
@@ -34,11 +24,6 @@
 
         animation: heroFadeUp 0.7s ease-out 0.1s forwards;
     }
-
-
-    // ==============================
-    // TITLE
-    // ==============================
 
     &__title-wrapper {
         overflow: hidden;
@@ -49,11 +34,6 @@
 
         animation: heroTitleReveal 0.9s cubic-bezier(.16, 1, .3, 1) 0.25s forwards;
     }
-
-
-    // ==============================
-    // BUTTON
-    // ==============================
 
     &__btn {
         opacity: 0;
@@ -70,11 +50,6 @@
 
         box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.15);
     }
-
-
-    // ==============================
-    // IMAGE WRAPPER
-    // ==============================
 
     &__image-wrapper {
         position: relative;

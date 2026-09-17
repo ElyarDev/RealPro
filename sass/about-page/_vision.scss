@@ -1,0 +1,57 @@
+.vision-section {
+    max-width: 130rem;
+    margin: 0 auto;
+}
+
+.vision {
+    padding: 9.6rem 0 8rem 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.8rem;
+
+    &__header {
+        text-align: center;
+        padding-top: 6rem;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__icon-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 30%;
+        padding: 3rem 0;
+        border-radius: 1rem;
+        box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+        margin-bottom: 2.5rem;
+        transition: all 0.2s;
+
+        &:hover {
+            transform: rotate(-8deg) scale(1.1);
+
+        }
+    }
+
+    &__text-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    &__title {
+        font-size: 2.2rem;
+        font-weight: bold;
+    }
+
+    &__description {
+        font-size: 1.6rem;
+        color: $color-general-3;
+        text-align: center;
+    }
+}
