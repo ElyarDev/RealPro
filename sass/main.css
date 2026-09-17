@@ -10,6 +10,7 @@ body {
 .btn {
   outline: 0;
   font-size: 1.6rem;
+  text-decoration: none;
   cursor: pointer;
 }
 .btn--transparent {

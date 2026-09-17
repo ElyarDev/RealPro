@@ -1,6 +1,7 @@
 .btn {
     outline: 0;
     font-size: 1.6rem;
+    text-decoration: none;
     cursor: pointer;
 
     &--transparent {
@@ -29,7 +30,6 @@
         border-radius: 1rem;
         transition: transform 0.25s ease, box-shadow 0.3s ease;
 
-        // افکت نور
         &::before {
             content: "";
             position: absolute;
