@@ -27,3 +27,59 @@
         display: block;
     }
 }
+
+// 1200px
+@media (max-width: 75em) {
+    .hero {
+        padding: 5rem 0;
+        gap: 3rem;
+
+        &__img {
+            width: 80%;
+        }
+    }
+}
+
+
+// 900px
+@media (max-width: 56.25em) {
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 4rem 0;
+        gap: 5rem;
+
+        &__text-box {
+            max-width: 65rem;
+        }
+
+        &__img {
+            width: 65%;
+            margin: 0 auto;
+        }
+    }
+}
+
+
+// 600px
+@media (max-width: 37.5em) {
+    .hero-section {
+        padding: 0 1.6rem;
+    }
+
+    .hero {
+        padding: 3rem 0;
+        gap: 3.5rem;
+
+        &__text-box {
+            gap: 2rem;
+
+            span {
+                font-size: 1.8rem;
+            }
+        }
+
+        &__img {
+            width: 85%;
+        }
+    }
+}

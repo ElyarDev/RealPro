@@ -79,3 +79,118 @@
         justify-content: center;
     }
 }
+
+// 1200px
+@media (max-width: 75em) {
+    .descover {
+        padding: 5rem 0;
+
+        &__items {
+            gap: 2.4rem;
+            margin-bottom: 6rem;
+        }
+
+        &__icon-box {
+            gap: 2rem;
+        }
+
+        &__price-box {
+            padding-top: 2.2rem;
+
+            span {
+                font-size: 2.1rem;
+            }
+        }
+    }
+}
+
+
+// 900px
+@media (max-width: 56.25em) {
+    .descover {
+        padding: 4rem 0;
+
+        &__top {
+            padding: 3rem 0;
+        }
+
+        &__items {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-bottom: 5rem;
+        }
+
+        &__item {
+            &__text-box {
+                padding: 2rem 1.8rem 0;
+            }
+        }
+
+        &__icon-box {
+            padding-left: 1.8rem;
+            padding-right: 1.8rem;
+        }
+
+        &__price-box {
+            padding-left: 1.8rem;
+            padding-right: 1.8rem;
+            margin-bottom: 2.8rem;
+        }
+    }
+}
+
+
+// 600px
+@media (max-width: 37.5em) {
+    .descover-section {
+        padding: 0 1.6rem;
+    }
+
+    .descover {
+        padding: 3rem 0;
+
+        &__top {
+            padding: 2.5rem 0;
+            text-align: center;
+
+            span {
+                font-size: 1.5rem;
+            }
+        }
+
+        &__items {
+            grid-template-columns: 1fr;
+            gap: 1.6rem;
+            margin-bottom: 4rem;
+        }
+
+        &__item {
+            &__text-box {
+                padding: 1.8rem 1.6rem 0;
+            }
+
+            &__text {
+                font-size: 1.5rem;
+            }
+        }
+
+        &__icon-box {
+            padding: 1.5rem 1.6rem 0;
+            gap: 1.6rem;
+
+            span {
+                font-size: 1.4rem;
+            }
+        }
+
+        &__price-box {
+            padding: 2rem 1.6rem 0;
+            gap: 1.2rem;
+            margin-bottom: 2.4rem;
+
+            span {
+                font-size: 2rem;
+            }
+        }
+    }
+}
