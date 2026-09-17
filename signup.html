@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>RealPro || Real State Website</title>
     <!-- font  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,88 +18,92 @@
 </head>
 
 <body>
+    <main class="signup">
+        <div class="signup__container">
+            <!-- Header -->
+            <header class="signup__header">
 
-    <main class="signup-page">
+                <h1 class="signup__title">
+                    Sign Up
+                </h1>
 
-        <section class="signup-card">
-
-            <!-- Heading -->
-            <div class="signup-header">
-
-                <h1>Sign Up</h1>
-
-                <p>
+                <p class="signup__description">
                     Please enter your details to create a new account.
                 </p>
 
-            </div>
-
+            </header>
 
             <!-- Form -->
-            <form class="signup-form">
+            <form class="signup__form">
 
                 <!-- Username -->
-                <div class="input-box">
+                <div class="signup__field">
 
-                    <input type="text" placeholder="UseName" required>
+                    <div class="signup__input-wrapper">
+
+                        <input class="signup__input" type="text" placeholder="UseName" required>
+
+                    </div>
 
                 </div>
-
 
                 <!-- Email -->
-                <div class="input-box">
+                <div class="signup__field">
 
-                    <input type="email" placeholder="Email" required>
+                    <div class="signup__input-wrapper">
+
+                        <input class="signup__input" type="email" placeholder="Email" required>
+
+                    </div>
 
                 </div>
-
 
                 <!-- Password -->
-                <div class="input-box password-box">
+                <div class="signup__field">
 
-                    <input type="password" id="password" placeholder="Password" required>
+                    <div class="signup__input-wrapper">
 
-                    <button type="button" class="password-toggle" id="passwordToggle">
-                        <i class="fa-regular fa-eye"></i>
-                    </button>
+                        <input class="signup__input signup__input--password" type="password" id="signup-password"
+                            placeholder="Password" required>
+
+                        <button class="signup__password-toggle" type="button" id="signup-password-toggle">
+                            <i class="fa-regular fa-eye"></i>
+                        </button>
+
+                    </div>
 
                 </div>
-
 
                 <!-- Repeat Password -->
-                <div class="input-box">
+                <div class="signup__field">
 
-                    <input type="password" placeholder="Repeat Password" required>
+                    <div class="signup__input-wrapper">
+
+                        <input class="signup__input" type="password" id="signup-repeat-password"
+                            placeholder="Repeat Password" required>
+
+                    </div>
 
                 </div>
 
-
-                <!-- Button -->
-                <button type="submit" class="signup-btn">
+                <!-- Submit -->
+                <button class="signup__button" type="submit">
                     Sign Up
                 </button>
 
             </form>
 
-
             <!-- Login -->
-            <p class="login-text">
+            <p class="signup__login">
 
                 Are you a member?
 
-                <a href="#">
+                <a class="signup__login-link" href="login.html">
                     Login Now
                 </a>
-
             </p>
-
-        </section>
-
+        </div>
     </main>
-
-
-    <script src="script.js"></script>
-
 </body>
 
 </html>

@@ -1,3 +1,7 @@
+// ========================================
+// RESET
+// ========================================
+
 * {
     margin: 0;
     padding: 0;
@@ -15,241 +19,276 @@ body {
 }
 
 
-/* =========================
-   PAGE
-========================= */
+// ========================================
+// SIGNUP
+// ========================================
 
-.signup-page {
+.signup {
+
     min-height: 100vh;
 
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 
     padding: 3rem;
+
+
+    // ====================================
+    // CONTAINER
+    // ====================================
+
+    &__container {
+
+        width: 100%;
+        max-width: 66rem;
+
+        padding: 4.5rem 3.5rem 3.5rem;
+
+        border: 1px solid #ddd;
+        border-radius: 1.5rem;
+
+        box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.05);
+    }
+
+
+    // ====================================
+    // HEADER
+    // ====================================
+
+    &__header {
+
+        text-align: center;
+
+        margin-bottom: 3.8rem;
+    }
+
+
+    &__title {
+
+        color: #17113d;
+
+        font-size: 4.5rem;
+        font-weight: 700;
+
+        margin-bottom: 1.8rem;
+    }
+
+
+    &__description {
+
+        color: #777;
+
+        font-size: 1.8rem;
+        line-height: 1.5;
+    }
+
+
+    // ====================================
+    // FORM
+    // ====================================
+
+    &__form {
+        width: 100%;
+    }
+
+
+    // ====================================
+    // FIELD
+    // ====================================
+
+    &__field {
+
+        margin-bottom: 1.8rem;
+    }
+
+
+    // ====================================
+    // INPUT WRAPPER
+    // ====================================
+
+    &__input-wrapper {
+
+        width: 100%;
+        height: 5.8rem;
+
+        display: flex;
+        align-items: center;
+
+        border: 1px solid #ddd;
+        border-radius: 1.2rem;
+
+        transition: border-color 0.2s ease;
+
+
+        &:focus-within {
+            border-color: #2358c5;
+        }
+    }
+
+
+    // ====================================
+    // INPUT
+    // ====================================
+
+    &__input {
+
+        width: 100%;
+        height: 100%;
+
+        padding: 0 2rem;
+
+        border: none;
+        outline: none;
+
+        background: transparent;
+
+        color: #333;
+
+        font-size: 1.7rem;
+
+
+        &::placeholder {
+            color: #777;
+        }
+
+
+        &--password {
+            padding-right: 0;
+        }
+    }
+
+
+    // ====================================
+    // PASSWORD TOGGLE
+    // ====================================
+
+    &__password-toggle {
+
+        flex-shrink: 0;
+
+        margin-right: 1.8rem;
+
+        border: none;
+        background: transparent;
+
+        color: #777;
+
+        font-size: 1.8rem;
+
+        cursor: pointer;
+    }
+
+
+    // ====================================
+    // BUTTON
+    // ====================================
+
+    &__button {
+
+        width: 100%;
+        height: 5.8rem;
+
+        margin-top: 0.5rem;
+
+        border: none;
+        border-radius: 1.2rem;
+
+        background-color: #1555c7;
+
+        color: #fff;
+
+        font-size: 1.8rem;
+        font-weight: 700;
+
+        cursor: pointer;
+
+        transition: background-color 0.2s ease;
+
+
+        &:hover {
+            background-color: #1048ad;
+        }
+
+
+        &:active {
+            transform: scale(0.99);
+        }
+    }
+
+
+    // ====================================
+    // LOGIN TEXT
+    // ====================================
+
+    &__login {
+
+        margin-top: 2.3rem;
+
+        text-align: center;
+
+        color: #666;
+
+        font-size: 1.7rem;
+    }
+
+
+    &__login-link {
+
+        margin-left: 0.4rem;
+
+        color: #173f82;
+
+        font-weight: 600;
+
+        text-decoration: underline;
+    }
 }
 
 
-/* =========================
-   CARD
-========================= */
-
-.signup-card {
-    width: 100%;
-    max-width: 66rem;
-
-    padding: 4.5rem 3.5rem 3.5rem;
-
-    border: 1px solid #ddd;
-    border-radius: 1.5rem;
-
-    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.05);
-}
-
-
-/* =========================
-   HEADER
-========================= */
-
-.signup-header {
-    text-align: center;
-
-    margin-bottom: 3.8rem;
-}
-
-.signup-header h1 {
-    color: #17113d;
-
-    font-size: 4.5rem;
-    font-weight: 700;
-
-    margin-bottom: 1.8rem;
-}
-
-.signup-header p {
-    color: #777;
-
-    font-size: 1.8rem;
-
-    line-height: 1.5;
-}
-
-
-/* =========================
-   FORM
-========================= */
-
-.signup-form {
-    width: 100%;
-}
-
-
-/* =========================
-   INPUT
-========================= */
-
-.input-box {
-    width: 100%;
-    height: 5.8rem;
-
-    border: 1px solid #ddd;
-    border-radius: 1.2rem;
-
-    margin-bottom: 1.8rem;
-
-    display: flex;
-    align-items: center;
-
-    transition: border-color 0.2s ease;
-}
-
-.input-box:focus-within {
-    border-color: #2358c5;
-}
-
-.input-box input {
-    width: 100%;
-    height: 100%;
-
-    border: none;
-    outline: none;
-
-    background: transparent;
-
-    padding: 0 2rem;
-
-    font-size: 1.7rem;
-
-    color: #333;
-}
-
-.input-box input::placeholder {
-    color: #777;
-}
-
-
-/* =========================
-   PASSWORD
-========================= */
-
-.password-box {
-    position: relative;
-}
-
-.password-box input {
-    padding-right: 5rem;
-}
-
-.password-toggle {
-    position: absolute;
-
-    right: 1.8rem;
-
-    border: none;
-    background: transparent;
-
-    color: #777;
-
-    font-size: 1.8rem;
-
-    cursor: pointer;
-}
-
-
-/* =========================
-   BUTTON
-========================= */
-
-.signup-btn {
-    width: 100%;
-    height: 5.8rem;
-
-    margin-top: 0.5rem;
-
-    border: none;
-    border-radius: 1.2rem;
-
-    background-color: #1555c7;
-
-    color: #fff;
-
-    font-size: 1.8rem;
-    font-weight: 700;
-
-    cursor: pointer;
-
-    transition: background-color 0.2s ease;
-}
-
-.signup-btn:hover {
-    background-color: #1048ad;
-}
-
-.signup-btn:active {
-    transform: scale(0.99);
-}
-
-
-/* =========================
-   LOGIN
-========================= */
-
-.login-text {
-    text-align: center;
-
-    margin-top: 2.3rem;
-
-    color: #666;
-
-    font-size: 1.7rem;
-}
-
-.login-text a {
-    margin-left: 0.4rem;
-
-    color: #173f82;
-
-    font-weight: 600;
-
-    text-decoration: underline;
-}
-
-
-/* =========================
-   RESPONSIVE
-========================= */
+// ========================================
+// RESPONSIVE
+// ========================================
 
 @media (max-width: 600px) {
 
-    .signup-page {
+    .signup {
+
         padding: 1.5rem;
-    }
 
-    .signup-card {
-        padding: 3.5rem 2rem 3rem;
-    }
 
-    .signup-header h1 {
-        font-size: 3.6rem;
-    }
+        &__container {
+            padding: 3.5rem 2rem 3rem;
+        }
 
-    .signup-header p {
-        font-size: 1.5rem;
-    }
 
-    .input-box {
-        height: 5.5rem;
-    }
+        &__title {
+            font-size: 3.6rem;
+        }
 
-    .input-box input {
-        font-size: 1.6rem;
-    }
 
-    .signup-btn {
-        height: 5.5rem;
-    }
+        &__description {
+            font-size: 1.5rem;
+        }
 
-    .login-text {
-        font-size: 1.5rem;
+
+        &__input-wrapper {
+            height: 5.5rem;
+        }
+
+
+        &__input {
+            font-size: 1.6rem;
+        }
+
+
+        &__button {
+            height: 5.5rem;
+        }
+
+
+        &__login {
+            font-size: 1.5rem;
+        }
     }
 }

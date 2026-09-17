@@ -4,107 +4,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>RealPro || Real State Website</title>
+    <!-- font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!-- icon  -->
+    <link rel="shortcut icon" href="assets/img/logo.png">
+    <!-- css  -->
+    <link rel="stylesheet" href="sass/main.css">
 </head>
 
 <body>
-    <!DOCTYPE html>
-    <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>RealPro || Real State Website</title>
-        <!-- font  -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
-            rel="stylesheet">
-        <!-- icon  -->
-        <link rel="shortcut icon" href="assets/img/logo.png">
-        <!-- css  -->
-        <link rel="stylesheet" href="sass/main.css">
-    </head>
+    <main class="login">
 
-    <body>
+        <div class="login__container">
 
-        <main class="login-page">
+            <!-- Header -->
+            <header class="login__header">
 
-            <section class="login-card">
+                <h1 class="login__title">
+                    Sign In
+                </h1>
 
-                <div class="login-header">
-                    <h1>Sign In</h1>
-                    <p>Please enter your information to proceed with login.</p>
-                </div>
-
-                <form class="login-form">
-
-                    <!-- Account -->
-                    <div class="form-group error">
-
-                        <div class="input-box">
-                            <input type="text" id="account" placeholder="Account">
-                        </div>
-
-                        <p class="error-message">
-                            <i class="fa-solid fa-triangle-exclamation"></i>
-                            Unknown Email Address. Check Again Or Try Your Username.
-                        </p>
-
-                    </div>
-
-                    <!-- Password -->
-                    <div class="form-group">
-
-                        <div class="input-box password-box">
-
-                            <input type="password" id="password" placeholder="Password">
-
-                            <button type="button" class="password-toggle" id="passwordToggle">
-                                <i class="fa-regular fa-eye"></i>
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                    <!-- Remember / Forgot -->
-                    <div class="form-options">
-
-                        <label class="remember">
-                            <input type="checkbox">
-                            <span>Remember Me</span>
-                        </label>
-
-                        <a href="#" class="forgot-password">
-                            Forgot Password?
-                        </a>
-
-                    </div>
-
-                    <!-- Button -->
-                    <button type="submit" class="login-btn">
-                        Sign In
-                    </button>
-
-                </form>
-
-                <!-- Register -->
-                <p class="register">
-                    Not a member yet?
-                    <a href="#">Register Now</a>
+                <p class="login__description">
+                    Please enter your information to proceed with login.
                 </p>
 
-            </section>
+            </header>
 
-        </main>
 
-        <script src="assets/app.js"></script>
+            <!-- Form -->
+            <form class="login__form">
 
-    </body>
+                <!-- Account -->
+                <div class="login__field login__field--error">
 
-    </html>
+                    <div class="login__input-wrapper">
+
+                        <input class="login__input" type="text" placeholder="Account">
+
+                    </div>
+
+                    <p class="login__error">
+
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+
+                        <span>
+                            Unknown Email Address. Check Again Or Try Your Username.
+                        </span>
+
+                    </p>
+
+                </div>
+
+
+                <!-- Password -->
+                <div class="login__field">
+
+                    <div class="login__input-wrapper">
+
+                        <input class="login__input" type="password" id="password" placeholder="Password">
+
+                        <button class="login__password-toggle" type="button" id="password-toggle"
+                            aria-label="Show password">
+                            <i class="fa-regular fa-eye"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Options -->
+                <div class="login__options">
+
+                    <label class="login__remember">
+
+                        <input class="login__checkbox" type="checkbox">
+
+                        <span class="login__remember-text">
+                            Remember Me
+                        </span>
+
+                    </label>
+
+
+                    <a class="login__forgot-link" href="#">
+                        Forgot Password?
+                    </a>
+
+                </div>
+
+
+                <!-- Submit -->
+                <button class="login__button" type="submit">
+                    Sign In
+                </button>
+
+            </form>
+
+
+            <!-- Register -->
+            <p class="login__register">
+
+                Not a member yet?
+
+                <a class="login__register-link" href="#">
+                    Register Now
+                </a>
+
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <script>
+
+        const password = document.querySelector("#password");
+        const toggle = document.querySelector("#password-toggle");
+
+        toggle.addEventListener("click", () => {
+
+            const isPassword = password.type === "password";
+
+            password.type = isPassword ? "text" : "password";
+
+            toggle.innerHTML = isPassword
+                ? '<i class="fa-regular fa-eye-slash"></i>'
+                : '<i class="fa-regular fa-eye"></i>';
+
+        });
+
+    </script>
+
 </body>
 
 </html>

@@ -12,12 +12,13 @@
     &__text-box {
         span {
             font-size: 2.2rem;
-            margin-bottom: -4rem;
+            // margin-bottom: -4rem;
         }
 
         display: flex;
         flex-direction: column;
         align-items: start;
+        gap: 2.8rem;
     }
 
     &__img {
