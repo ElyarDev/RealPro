@@ -49,63 +49,73 @@
         align-items: center;
         justify-content: center;
     }
+}
 
-    // BLOG PAGE
-    &__image {
-        margin: 8rem 0;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 3.2rem;
+.active {
+    color: $color-primary;
+}
 
-        &-main {
-            width: 100%;
-        }
+// 1200px
+@media (max-width: 75em) {
+    .blogs {
+        gap: 2.4rem;
     }
 
-    &__image-box {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
-    }
-
-    &__text-new {
-        display: flex;
-        align-items: center;
-        gap: 1.5rem;
-        border: 2px solid $color-general-6;
-        border-radius: 1.5rem;
-
-        img {
-            width: 40%;
+    .blog {
+        &__text-box {
+            padding: 2.4rem;
         }
 
-        &>div {
-            padding: 1rem;
-        }
-    }
-
-    &__pagination {
-        &__list {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 3.5rem;
-            list-style: none;
-            font-size: 1.8rem;
-
-            li a {
-                text-decoration: none;
-                color: $color-general-3;
-            }
-
+        &__icon-box {
+            gap: 2.4rem;
         }
     }
 }
 
 
+// 900px
+@media (max-width: 56.25em) {
+    .blogs {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
 
-.active {
-    color: $color-primary;
+    .blog {
+        margin-bottom: 2rem;
+
+        &__text-box {
+            padding: 2rem;
+        }
+    }
+}
+
+
+// 600px
+@media (max-width: 37.5em) {
+    .blog-section {
+        padding: 0 1.6rem;
+    }
+
+    .blogs {
+        grid-template-columns: 1fr;
+        gap: 1.6rem;
+    }
+
+    .blog {
+        margin-bottom: 1.6rem;
+
+        &__text-box {
+            padding: 2rem 1.6rem;
+            gap: 1.4rem;
+        }
+
+        &__icon-box {
+            gap: 1.8rem;
+            font-size: 1.3rem;
+        }
+
+        &__text {
+            font-size: 1.5rem;
+        }
+    }
 }
