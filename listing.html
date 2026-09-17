@@ -1,0 +1,1645 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>High-Rise Townhouse In Califorlia | RealPro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blue: #1E40AF;
+      --blue-dark: #16296B;
+      --blue-light: #EEF2FF;
+      --gold: #F5A623;
+      --ink: #1A1D29;
+      --gray: #6B7280;
+      --gray-light: #9CA3AF;
+      --line: #E5E7EB;
+      --bg-soft: #F6F7F9;
+      --paper: #FFFFFF;
+      --radius: 10px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg-soft);
+      color: var(--ink);
+      font-family: 'Inter', system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .wrap {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* HEADER */
+    header {
+      background: var(--paper);
+      border-bottom: 1px solid var(--line);
+      position: sticky;
+      top: 0;
+      z-index: 40;
+    }
+
+    .nav-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 800;
+      font-size: 1.25rem;
+      color: var(--blue-dark);
+    }
+
+    .logo svg {
+      width: 26px;
+      height: 26px;
+      color: var(--blue-dark);
+    }
+
+    nav.main {
+      display: flex;
+      gap: 30px;
+    }
+
+    nav.main a {
+      font-size: .92rem;
+      color: var(--gray);
+      font-weight: 500;
+    }
+
+    nav.main a.active {
+      color: var(--blue);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .btn {
+      font-size: .86rem;
+      font-weight: 600;
+      padding: 10px 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      border: 1px solid transparent;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn-solid {
+      background: var(--blue-dark);
+      color: #fff;
+    }
+
+    .btn-solid:hover {
+      background: var(--blue);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border-color: var(--line);
+      color: var(--ink);
+    }
+
+    .icon-circle {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mobile-toggle {
+      display: none;
+      background: none;
+      border: none;
+    }
+
+    .crumb-bar {
+      background: var(--bg-soft);
+      padding: 14px 0;
+      font-size: .85rem;
+      color: var(--gray-light);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .crumb-bar span {
+      color: var(--gray);
+    }
+
+    /* TITLE ROW */
+    .title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 32px 0 18px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .title-row h1 {
+      font-size: 1.9rem;
+      font-weight: 700;
+      margin: 0 0 10px;
+    }
+
+    .badges {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .pill {
+      font-size: .72rem;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: 6px;
+    }
+
+    .pill-rent {
+      background: var(--blue-dark);
+      color: #fff;
+    }
+
+    .stars {
+      color: var(--gold);
+      font-size: .82rem;
+      letter-spacing: 1px;
+    }
+
+    .muted-sm {
+      color: var(--gray-light);
+      font-size: .8rem;
+    }
+
+    .loc {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 10px;
+      color: var(--gray);
+      font-size: .88rem;
+    }
+
+    .price-col {
+      text-align: right;
+    }
+
+    .price-col .amount {
+      font-size: 1.7rem;
+      font-weight: 800;
+      color: var(--blue);
+    }
+
+    .price-col .per {
+      color: var(--gray-light);
+      font-size: .82rem;
+      margin-top: 2px;
+    }
+
+    /* GALLERY */
+    .gallery {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr;
+      gap: 10px;
+      height: 420px;
+      margin-bottom: 36px;
+    }
+
+    .gallery-main {
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .gallery-side {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .gallery-side>div {
+      border-radius: var(--radius);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .gallery svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .overlay-count {
+      position: absolute;
+      inset: 0;
+      background: rgba(15, 20, 35, .55);
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* CONTENT GRID */
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 40px;
+      align-items: start;
+      padding-bottom: 40px;
+    }
+
+    section.block {
+      margin-bottom: 38px;
+    }
+
+    .block-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+
+    .block-head h2 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .block-head .side-note {
+      font-size: .82rem;
+      color: var(--gray-light);
+    }
+
+    .stat-row {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+    }
+
+    .stat-box {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .stat-box svg {
+      width: 22px;
+      height: 22px;
+      color: var(--blue);
+      flex-shrink: 0;
+    }
+
+    .stat-box .num {
+      font-weight: 700;
+      font-size: 1.05rem;
+    }
+
+    .stat-box .lbl {
+      font-size: .75rem;
+      color: var(--gray-light);
+    }
+
+    .info-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .info-row {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+    .info-row+.info-row {
+      border-top: 1px solid var(--line);
+    }
+
+    .info-cell {
+      padding: 16px 18px;
+      border-right: 1px solid var(--line);
+    }
+
+    .info-cell:last-child {
+      border-right: none;
+    }
+
+    .info-cell .k {
+      font-size: .75rem;
+      color: var(--gray-light);
+      margin-bottom: 5px;
+    }
+
+    .info-cell .v {
+      font-weight: 700;
+      font-size: .92rem;
+    }
+
+    .amenities-card {
+      margin-top: 14px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 16px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+    }
+
+    .amenity {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: .86rem;
+      font-weight: 500;
+    }
+
+    .amenity .chk {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .amenity .chk svg {
+      width: 10px;
+      height: 10px;
+      color: #fff;
+    }
+
+    .desc-card {
+      margin-top: 20px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 20px;
+    }
+
+    .desc-card p {
+      color: var(--gray);
+      font-size: .9rem;
+      line-height: 1.75;
+      margin: 0 0 12px;
+    }
+
+    .map-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      height: 260px;
+    }
+
+    .map-card svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .floorplan {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 20px 22px;
+    }
+
+    .fp-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .fp-head .left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+    }
+
+    .fp-meta {
+      display: flex;
+      gap: 18px;
+      color: var(--gray-light);
+      font-size: .8rem;
+      flex-wrap: wrap;
+    }
+
+    .fp-body {
+      margin-top: 20px;
+    }
+
+    .fp-body svg {
+      width: 100%;
+      height: auto;
+      max-height: 280px;
+    }
+
+    .fp-desc {
+      margin-top: 16px;
+      color: var(--gray);
+      font-size: .86rem;
+      line-height: 1.7;
+    }
+
+    .video-card {
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
+      height: 320px;
+    }
+
+    .video-card svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .play-btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: #E11D24;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, .35);
+      cursor: pointer;
+    }
+
+    .play-btn svg {
+      width: 22px;
+      height: 22px;
+      color: #fff;
+      margin-left: 3px;
+    }
+
+    .rev-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+    }
+
+    .rev-summary {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--gray);
+      font-size: .88rem;
+      margin-bottom: 18px;
+    }
+
+    .review-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .review-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 18px;
+    }
+
+    .rev-top {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--blue-light);
+      color: var(--blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: .85rem;
+    }
+
+    .rev-name {
+      font-weight: 600;
+      font-size: .9rem;
+    }
+
+    .rev-time {
+      font-size: .74rem;
+      color: var(--gray-light);
+    }
+
+    .review-card p {
+      margin: 12px 0 0;
+      color: var(--gray);
+      font-size: .85rem;
+      line-height: 1.6;
+    }
+
+    .view-more {
+      display: inline-block;
+      margin-top: 18px;
+      font-size: .86rem;
+      font-weight: 600;
+      color: var(--blue);
+    }
+
+    /* SIDEBAR */
+    .side-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 22px;
+      position: sticky;
+      top: 92px;
+    }
+
+    .side-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    .side-title svg {
+      width: 15px;
+      height: 15px;
+      color: var(--gold);
+    }
+
+    .side-card .pill {
+      margin-top: 10px;
+      display: inline-block;
+    }
+
+    .side-stars {
+      margin-top: 8px;
+    }
+
+    .side-loc {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: .8rem;
+      color: var(--gray-light);
+      margin-top: 8px;
+    }
+
+    .side-price {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--blue);
+      margin-top: 14px;
+    }
+
+    .side-price small {
+      font-size: .75rem;
+      color: var(--gray-light);
+      font-weight: 500;
+    }
+
+    .divider {
+      height: 1px;
+      background: var(--line);
+      margin: 18px 0;
+    }
+
+    .contact-label {
+      font-size: .82rem;
+      color: var(--gray);
+      margin-bottom: 12px;
+    }
+
+    .agent-box {
+      background: var(--bg-soft);
+      border-radius: 8px;
+      padding: 14px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .agent-name {
+      font-weight: 600;
+      font-size: .88rem;
+    }
+
+    .agent-phone {
+      font-size: .78rem;
+      color: var(--gray-light);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin-top: 2px;
+    }
+
+    .agent-actions {
+      display: flex;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .agent-actions .btn {
+      flex: 1;
+      justify-content: center;
+      padding: 9px 10px;
+      font-size: .8rem;
+    }
+
+    .promo-card {
+      margin-top: 20px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: linear-gradient(180deg, #1B2540, #0E1626);
+      color: #fff;
+      padding: 24px;
+    }
+
+    .promo-card h3 {
+      font-size: 1.15rem;
+      margin: 0 0 8px;
+    }
+
+    .promo-card p {
+      font-size: .82rem;
+      color: #B9C0D6;
+      line-height: 1.6;
+      margin: 0 0 16px;
+    }
+
+    .promo-card .btn {
+      background: var(--blue);
+      color: #fff;
+    }
+
+    .promo-strip {
+      display: flex;
+      gap: 6px;
+      margin-top: 18px;
+    }
+
+    .promo-strip svg {
+      width: 100%;
+      height: 56px;
+      border-radius: 6px;
+    }
+
+    /* SIMILAR */
+    .similar {
+      padding: 56px 0 20px;
+      text-align: center;
+    }
+
+    .similar h2 {
+      font-size: 1.7rem;
+      font-weight: 700;
+      margin: 0 0 34px;
+    }
+
+    .similar-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      text-align: left;
+    }
+
+    .prop-card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+
+    .prop-thumb {
+      position: relative;
+      height: 170px;
+    }
+
+    .prop-thumb svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .prop-thumb .pill {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+    }
+
+    .prop-thumb .fav {
+      position: absolute;
+      bottom: -16px;
+      right: 14px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .prop-body {
+      padding: 24px 16px 16px;
+    }
+
+    .prop-body h3 {
+      margin: 0 0 8px;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    .prop-loc {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: .78rem;
+      color: var(--gray-light);
+      margin-bottom: 12px;
+    }
+
+    .prop-stats {
+      display: flex;
+      gap: 12px;
+      font-size: .75rem;
+      color: var(--gray);
+      margin-bottom: 14px;
+    }
+
+    .prop-stats span {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .prop-foot {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid var(--line);
+      padding-top: 12px;
+    }
+
+    .prop-foot .price {
+      font-weight: 800;
+      font-size: .95rem;
+      color: var(--blue);
+    }
+
+    .prop-foot .price small {
+      font-weight: 500;
+      color: var(--gray-light);
+    }
+
+    .prop-foot .btn {
+      padding: 7px 12px;
+      font-size: .74rem;
+    }
+
+    .view-all {
+      margin-top: 32px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--paper);
+      border-top: 1px solid var(--line);
+      margin-top: 20px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+      gap: 36px;
+      padding: 56px 0 34px;
+    }
+
+    .footer-grid h4 {
+      font-size: .85rem;
+      font-weight: 700;
+      margin: 0 0 16px;
+    }
+
+    .footer-grid ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-grid a {
+      font-size: .84rem;
+      color: var(--gray);
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 800;
+      font-size: 1.15rem;
+      color: var(--blue-dark);
+    }
+
+    .footer-logo svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .foot-contact {
+      margin-top: 14px;
+      font-size: .84rem;
+      color: var(--gray);
+      line-height: 1.9;
+    }
+
+    .foot-contact div {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+
+    .foot-contact svg {
+      width: 14px;
+      height: 14px;
+      flex-shrink: 0;
+      margin-top: 3px;
+      color: var(--gray-light);
+    }
+
+    .subscribe-row {
+      display: flex;
+      margin-top: 4px;
+    }
+
+    .subscribe-row input {
+      flex: 1;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px 0 0 8px;
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-soft);
+      color: var(--ink);
+    }
+
+    .subscribe-row button {
+      border-radius: 0 8px 8px 0;
+      padding: 0 16px;
+      background: var(--blue-dark);
+      color: #fff;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: .84rem;
+    }
+
+    .foot-social {
+      display: flex;
+      gap: 10px;
+      margin-top: 24px;
+      padding: 20px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .foot-social a {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--bg-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .foot-social svg {
+      width: 14px;
+      height: 14px;
+      color: var(--gray);
+    }
+
+    @media (max-width:980px) {
+      nav.main {
+        display: none;
+      }
+
+      .mobile-toggle {
+        display: block;
+      }
+
+      .content-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .side-card {
+        position: static;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+        height: auto;
+      }
+
+      .gallery-main {
+        height: 220px;
+      }
+
+      .gallery-side {
+        height: 180px;
+      }
+
+      .stat-row {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .info-row {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .info-cell:nth-child(2n) {
+        border-right: none;
+      }
+
+      .review-grid,
+      .similar-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .title-row {
+        flex-direction: column;
+      }
+
+      .price-col {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="wrap nav-row">
+      <a class="logo" href="#top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path d="M3 21h18M5 21V7l6-4 6 4v14M9 21v-6h4v6" />
+        </svg>
+        RealPro
+      </a>
+      <nav class="main">
+        <a href="#top">Home</a>
+        <a href="#top" class="active">Listing</a>
+        <a href="#reviews">Contact</a>
+        <a href="#top">Agents</a>
+        <a href="#top">About</a>
+        <a href="#top">Blog</a>
+      </nav>
+      <div class="nav-right">
+        <a href="#top" style="font-size:.86rem;font-weight:600;color:var(--gray);">Sign Up</a>
+        <a class="btn btn-solid" href="#top">Create a Listing</a>
+        <div class="icon-circle">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <circle cx="9" cy="21" r="1" />
+            <circle cx="20" cy="21" r="1" />
+            <path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6" />
+          </svg>
+        </div>
+        <button class="mobile-toggle"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.8">
+            <path d="M4 7h16M4 12h16M4 17h16" />
+          </svg></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="crumb-bar">
+    <div class="wrap">Home &nbsp;›&nbsp; <span>Listing</span></div>
+  </div>
+
+  <div class="wrap" id="top">
+    <div class="title-row">
+      <div>
+        <h1>High-Rise Townhouse In Califorlia</h1>
+        <div class="badges">
+          <span class="pill pill-rent">For Rent</span>
+          <span class="stars">★★★★★</span>
+          <span class="muted-sm">(2 Reviews)</span>
+        </div>
+        <div class="loc">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M12 21s7-6.4 7-12a7 7 0 1 0-14 0c0 5.6 7 12 7 12z" />
+            <circle cx="12" cy="9" r="2.4" />
+          </svg>
+          Southwestern Ontario, Ontario, Canada
+        </div>
+      </div>
+      <div class="price-col">
+        <div class="amount">$425,000</div>
+        <div class="per">1,200/Sq Ft</div>
+      </div>
+    </div>
+
+    <!-- GALLERY -->
+    <div class="gallery">
+      <div class="gallery-main">
+        <svg viewBox="0 0 720 560" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#0B1220" />
+              <stop offset="1" stop-color="#1B2A44" />
+            </linearGradient>
+            <linearGradient id="glow" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#FDE9B8" />
+              <stop offset="1" stop-color="#F5A623" />
+            </linearGradient>
+          </defs>
+          <rect width="720" height="560" fill="url(#sky)" />
+          <ellipse cx="140" cy="200" rx="190" ry="240" fill="#0F1930" opacity=".7" />
+          <path d="M60 150 C110 60 260 50 300 150" stroke="#22304E" stroke-width="14" fill="none" />
+          <rect x="190" y="270" width="470" height="210" fill="#182236" />
+          <rect x="190" y="270" width="470" height="8" fill="#2A3A5A" />
+          <rect x="225" y="305" width="90" height="120" fill="url(#glow)" opacity=".9" />
+          <rect x="335" y="305" width="90" height="60" fill="url(#glow)" opacity=".55" />
+          <rect x="445" y="305" width="150" height="175" fill="url(#glow)" opacity=".25" />
+          <rect x="190" y="470" width="470" height="10" fill="#101828" />
+          <rect x="0" y="480" width="720" height="80" fill="#0C1424" />
+        </svg>
+      </div>
+      <div class="gallery-side">
+        <div>
+          <svg viewBox="0 0 300 220" preserveAspectRatio="xMidYMid slice">
+            <rect width="300" height="220" fill="#101828" />
+            <rect x="0" y="150" width="300" height="70" fill="#0C1424" />
+            <rect x="40" y="70" width="220" height="80" fill="#1B2A44" />
+            <rect x="60" y="90" width="55" height="55" fill="#F5A623" opacity=".55" />
+            <rect x="140" y="90" width="55" height="55" fill="#FDE9B8" opacity=".35" />
+          </svg>
+        </div>
+        <div>
+          <svg viewBox="0 0 300 220" preserveAspectRatio="xMidYMid slice">
+            <rect width="300" height="220" fill="#2A2118" />
+            <rect x="0" y="0" width="300" height="220" fill="#3A2E1E" />
+            <rect x="30" y="40" width="140" height="90" fill="#4A3A22" opacity=".7" />
+            <circle cx="230" cy="90" r="30" fill="#F5A623" opacity=".5" />
+            <rect x="0" y="170" width="300" height="50" fill="#1F1810" />
+          </svg>
+        </div>
+        <div>
+          <svg viewBox="0 0 300 220" preserveAspectRatio="xMidYMid slice">
+            <rect width="300" height="220" fill="#0F1930" />
+            <ellipse cx="150" cy="80" rx="140" ry="90" fill="#182236" opacity=".8" />
+            <rect x="0" y="150" width="300" height="70" fill="#0C1424" />
+          </svg>
+        </div>
+        <div>
+          <svg viewBox="0 0 300 220" preserveAspectRatio="xMidYMid slice">
+            <rect width="300" height="220" fill="#0B1220" />
+            <rect x="20" y="90" width="260" height="100" fill="#182236" />
+            <rect x="50" y="115" width="50" height="55" fill="#F5A623" opacity=".6" />
+            <rect x="120" y="115" width="50" height="55" fill="#FDE9B8" opacity=".4" />
+          </svg>
+          <div class="overlay-count">+1</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-grid">
+      <main>
+        <!-- OVERVIEW -->
+        <section class="block">
+          <div class="block-head">
+            <h2>Overview</h2>
+            <span class="side-note">Property ID: HZ24</span>
+          </div>
+          <div class="stat-row">
+            <div class="stat-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M3 18v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6" />
+                <path d="M3 18h18M5 10V6a2 2 0 0 1 2-2h3v6" />
+              </svg>
+              <div>
+                <div class="num">2</div>
+                <div class="lbl">Bedrooms</div>
+              </div>
+            </div>
+            <div class="stat-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M4 12h16M6 12V5a2 2 0 0 1 2-2h1M4 18h16" />
+              </svg>
+              <div>
+                <div class="num">2</div>
+                <div class="lbl">Bathrooms</div>
+              </div>
+            </div>
+            <div class="stat-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="3" y="10" width="18" height="9" rx="1" />
+                <path d="M5 10l2-6h10l2 6M7 15h.01M17 15h.01" />
+              </svg>
+              <div>
+                <div class="num">2</div>
+                <div class="lbl">Garage</div>
+              </div>
+            </div>
+            <div class="stat-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="3" y="4" width="18" height="17" rx="2" />
+                <path d="M3 9h18M8 2v4M16 2v4" />
+              </svg>
+              <div>
+                <div class="num">2022</div>
+                <div class="lbl">Year Built</div>
+              </div>
+            </div>
+            <div class="stat-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z" />
+              </svg>
+              <div>
+                <div class="num">1,354</div>
+                <div class="lbl">Area Size</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- INFORMATION -->
+        <section class="block">
+          <div class="block-head">
+            <h2>Information</h2>
+          </div>
+          <div class="info-card">
+            <div class="info-row">
+              <div class="info-cell">
+                <div class="k">Price</div>
+                <div class="v">$425,000</div>
+              </div>
+              <div class="info-cell">
+                <div class="k">Area Size</div>
+                <div class="v">1435 Sq Ft</div>
+              </div>
+              <div class="info-cell">
+                <div class="k">Rooms</div>
+                <div class="v">5</div>
+              </div>
+              <div class="info-cell">
+                <div class="k">Year Built</div>
+                <div class="v">2022</div>
+              </div>
+              <div class="info-cell">
+                <div class="k">Land Area Size</div>
+                <div class="v">3766 Sq Ft</div>
+              </div>
+            </div>
+            <div class="info-row">
+              <div class="info-cell">
+                <div class="k">Property ID</div>
+                <div class="v">HZ24</div>
+              </div>
+              <div class="info-cell">
+                <div class="k">Bedrooms</div>
+                <div class="v">6</div>
+              </div>
+              <div class="info-cell"></div>
+              <div class="info-cell"></div>
+              <div class="info-cell"></div>
+            </div>
+          </div>
+
+          <div class="amenities-card">
+            <div class="amenity"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg></span>HVAC</div>
+            <div class="amenity"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg></span>Barbeque</div>
+            <div class="amenity"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg></span>Laundry</div>
+            <div class="amenity"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg></span>Garden</div>
+            <div class="amenity"><span class="chk"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg></span>Dryer</div>
+          </div>
+
+          <div class="desc-card">
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+              laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+              ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+            <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
+              eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim...</p>
+          </div>
+        </section>
+
+        <!-- MAP -->
+        <section class="block">
+          <div class="block-head">
+            <h2>Map Location</h2>
+            <a class="btn btn-solid" href="#top">Open Map</a>
+          </div>
+          <div class="map-card">
+            <svg viewBox="0 0 800 260" preserveAspectRatio="xMidYMid slice">
+              <rect width="800" height="260" fill="#E9EBEE" />
+              <path d="M0 80 C 220 30, 360 120, 800 60" stroke="#D6D9DE" stroke-width="16" fill="none" />
+              <path d="M40 260 C 150 190, 260 240, 400 170 S 660 60, 800 110" stroke="#FFFFFF" stroke-width="9"
+                fill="none" />
+              <rect x="120" y="50" width="200" height="80" rx="4" fill="#CFE3D0" opacity=".8" />
+              <rect x="470" y="140" width="180" height="80" rx="4" fill="#CFE3D0" opacity=".8" />
+              <g transform="translate(420,120)">
+                <path d="M0 0 C -15 -15 -15 -38 0 -50 C 15 -38 15 -15 0 0 Z" fill="#1E40AF" />
+                <circle cx="0" cy="-36" r="6" fill="#fff" />
+              </g>
+            </svg>
+          </div>
+        </section>
+
+        <!-- FLOOR PLANS -->
+        <section class="block">
+          <div class="block-head">
+            <h2>Floor Plans</h2>
+          </div>
+          <div class="floorplan">
+            <div class="fp-head">
+              <div class="left">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 15l-6-6-6 6" />
+                </svg>
+                New Plan Title
+              </div>
+              <div class="fp-meta">
+                <span>1435 Sq Ft</span><span>4 Beds</span><span>2 Baths</span><span>$1,345</span>
+              </div>
+            </div>
+            <div class="fp-body">
+              <svg viewBox="0 0 640 360" fill="none" stroke="var(--gray)" stroke-width="2">
+                <rect x="20" y="20" width="600" height="320" />
+                <line x1="260" y1="20" x2="260" y2="200" />
+                <line x1="260" y1="200" x2="620" y2="200" />
+                <line x1="420" y1="200" x2="420" y2="340" />
+                <line x1="20" y1="240" x2="260" y2="240" />
+                <rect x="70" y="55" width="140" height="65" stroke-dasharray="4 3" />
+                <rect x="300" y="55" width="140" height="95" stroke-dasharray="4 3" />
+                <path d="M420 210 A 36 36 0 0 1 456 246" stroke-dasharray="2 2" />
+              </svg>
+            </div>
+            <div class="fp-desc">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+              laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+              ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+            </div>
+          </div>
+        </section>
+
+        <!-- VIDEO -->
+        <section class="block">
+          <div class="block-head">
+            <h2>Video</h2>
+          </div>
+          <div class="video-card">
+            <svg viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice">
+              <rect width="800" height="400" fill="#E9E2D3" />
+              <rect x="120" y="60" width="560" height="280" fill="#D8CBAE" />
+              <path d="M260 340 L260 160 L540 160 L540 340" stroke="#B7A57E" stroke-width="4" fill="none" />
+              <rect x="300" y="190" width="80" height="150" fill="#8FA6C9" opacity=".6" />
+            </svg>
+            <div class="play-btn"><svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M8 5v14l11-7z" />
+              </svg></div>
+          </div>
+        </section>
+
+        <!-- REVIEWS -->
+        <section class="block" id="reviews">
+          <div class="rev-head">
+            <h2 style="font-size:1.3rem;font-weight:700;margin:0;">What Our Customers Say</h2>
+            <a class="btn btn-solid" href="#top">Write A Review</a>
+          </div>
+          <div class="rev-summary"><span class="stars">★★★★★</span> 5.0 &nbsp; 1,540 reviews</div>
+          <div class="review-grid">
+            <div class="review-card">
+              <div class="rev-top">
+                <div class="avatar">RD</div>
+                <div>
+                  <div class="rev-name">Rachel Dan</div>
+                  <div class="rev-time">Today 09:36 AM</div>
+                </div>
+                <span class="stars" style="margin-left:auto;">★★★★★</span>
+              </div>
+              <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum
+                dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim........</p>
+            </div>
+            <div class="review-card">
+              <div class="rev-top">
+                <div class="avatar">RD</div>
+                <div>
+                  <div class="rev-name">Rachel Dan</div>
+                  <div class="rev-time">Today 09:36 AM</div>
+                </div>
+                <span class="stars" style="margin-left:auto;">★★★★★</span>
+              </div>
+              <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum
+                dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim........</p>
+            </div>
+          </div>
+          <a class="view-more" href="#top">View More</a>
+        </section>
+      </main>
+
+      <!-- SIDEBAR -->
+      <aside>
+        <div class="side-card">
+          <div class="side-title">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l2.9 6.9L22 9.6l-5.5 4.8L18 22l-6-3.9L6 22l1.5-7.6L2 9.6l7.1-.7L12 2z" />
+            </svg>
+            High-Rise Townhouse
+          </div>
+          <span class="pill pill-rent">For Rent</span>
+          <div class="side-stars stars">★★★★★ <span class="muted-sm">(2 Reviews)</span></div>
+          <div class="side-loc">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M12 21s7-6.4 7-12a7 7 0 1 0-14 0c0 5.6 7 12 7 12z" />
+            </svg>
+            Southwestern Ontario, Ontario, Canada
+          </div>
+          <div class="side-price">$425,000 <small>1,200/Sq Ft</small></div>
+          <div class="divider"></div>
+          <div class="contact-label">Contact With Us Now!</div>
+          <div class="agent-box">
+            <div class="avatar">RD</div>
+            <div>
+              <div class="agent-name">Rachel Dan</div>
+              <div class="agent-phone">
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 2 .7 2.9a2 2 0 0 1-.4 2.1L8 10a16 16 0 0 0 6 6l1.3-1.4a2 2 0 0 1 2.1-.4c.9.4 1.9.6 2.9.7a2 2 0 0 1 1.7 2z" />
+                </svg>
+                0485.526.258
+              </div>
+            </div>
+          </div>
+          <div class="agent-actions">
+            <a class="btn btn-outline" href="tel:0485526258">Call Now</a>
+            <a class="btn btn-solid" href="#top">Send A Message</a>
+          </div>
+        </div>
+
+        <div class="promo-card">
+          <h3>New Template</h3>
+          <p>Advertise your real estate to a wider audience with our landing page.</p>
+          <a class="btn" href="#top">Try It Now</a>
+          <div class="promo-strip">
+            <svg viewBox="0 0 100 60">
+              <rect width="100" height="60" fill="#182236" />
+              <rect x="10" y="30" width="30" height="24" fill="#F5A623" opacity=".5" />
+            </svg>
+            <svg viewBox="0 0 100 60">
+              <rect width="100" height="60" fill="#101828" />
+              <rect x="55" y="20" width="30" height="34" fill="#FDE9B8" opacity=".4" />
+            </svg>
+            <svg viewBox="0 0 100 60">
+              <rect width="100" height="60" fill="#0B1220" />
+              <rect x="30" y="15" width="40" height="39" fill="#F5A623" opacity=".35" />
+            </svg>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <!-- SIMILAR PROPERTIES -->
+  <div class="similar">
+    <div class="wrap">
+      <h2>Similar Properties</h2>
+      <div class="similar-grid">
+        <div class="prop-card">
+          <div class="prop-thumb">
+            <svg viewBox="0 0 400 260" preserveAspectRatio="xMidYMid slice">
+              <rect width="400" height="260" fill="#8FA6C9" />
+              <rect x="0" y="180" width="400" height="80" fill="#5F7AA6" />
+              <rect x="40" y="70" width="320" height="110" fill="#F5F3EE" />
+              <rect x="70" y="100" width="60" height="60" fill="#2A3A5A" opacity=".5" />
+              <rect x="160" y="100" width="60" height="60" fill="#2A3A5A" opacity=".3" />
+              <rect x="250" y="100" width="60" height="60" fill="#2A3A5A" opacity=".2" />
+            </svg>
+            <span class="pill pill-rent">For Rent</span>
+            <div class="fav"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#6B7280"
+                stroke-width="1.8">
+                <path
+                  d="M12 21s-7.5-4.7-10-9.3C.6 8.1 2.6 4.5 6 4c2.3-.3 4.3 1 6 3 1.7-2 3.7-3.3 6-3 3.4.5 5.4 4.1 4 7.7-2.5 4.6-10 9.3-10 9.3z" />
+              </svg></div>
+          </div>
+          <div class="prop-body">
+            <h3>High-Rise Townhouse</h3>
+            <div class="prop-loc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path d="M12 21s7-6.4 7-12a7 7 0 1 0-14 0c0 5.6 7 12 7 12z" />
+              </svg> Southwestern Ontario, Ontario, Canada</div>
+            <div class="prop-stats"><span>4 Beds</span><span>3 Baths</span><span>2,280 Sqft</span></div>
+            <div class="prop-foot">
+              <div class="price">$1.239 <small>/Month</small></div><a class="btn btn-outline" href="#top">View
+                Detail</a>
+            </div>
+          </div>
+        </div>
+        <div class="prop-card">
+          <div class="prop-thumb">
+            <svg viewBox="0 0 400 260" preserveAspectRatio="xMidYMid slice">
+              <rect width="400" height="260" fill="#7C93BA" />
+              <rect x="0" y="180" width="400" height="80" fill="#506895" />
+              <rect x="30" y="60" width="340" height="120" fill="#EFEDE6" />
+              <rect x="60" y="95" width="70" height="65" fill="#2A3A5A" opacity=".5" />
+              <rect x="165" y="95" width="70" height="65" fill="#2A3A5A" opacity=".3" />
+              <rect x="270" y="95" width="70" height="65" fill="#2A3A5A" opacity=".2" />
+            </svg>
+            <span class="pill pill-rent">For Rent</span>
+            <div class="fav"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#6B7280"
+                stroke-width="1.8">
+                <path
+                  d="M12 21s-7.5-4.7-10-9.3C.6 8.1 2.6 4.5 6 4c2.3-.3 4.3 1 6 3 1.7-2 3.7-3.3 6-3 3.4.5 5.4 4.1 4 7.7-2.5 4.6-10 9.3-10 9.3z" />
+              </svg></div>
+          </div>
+          <div class="prop-body">
+            <h3>High-Rise Townhouse</h3>
+            <div class="prop-loc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path d="M12 21s7-6.4 7-12a7 7 0 1 0-14 0c0 5.6 7 12 7 12z" />
+              </svg> Southwestern Ontario, Ontario, Canada</div>
+            <div class="prop-stats"><span>4 Beds</span><span>3 Baths</span><span>2,280 Sqft</span></div>
+            <div class="prop-foot">
+              <div class="price">$1.239 <small>/Month</small></div><a class="btn btn-outline" href="#top">View
+                Detail</a>
+            </div>
+          </div>
+        </div>
+        <div class="prop-card">
+          <div class="prop-thumb">
+            <svg viewBox="0 0 400 260" preserveAspectRatio="xMidYMid slice">
+              <rect width="400" height="260" fill="#9CB0D1" />
+              <rect x="0" y="180" width="400" height="80" fill="#647CA3" />
+              <rect x="20" y="65" width="360" height="115" fill="#F2F0E9" />
+              <rect x="50" y="95" width="65" height="60" fill="#2A3A5A" opacity=".5" />
+              <rect x="160" y="95" width="65" height="60" fill="#2A3A5A" opacity=".3" />
+              <rect x="270" y="95" width="65" height="60" fill="#2A3A5A" opacity=".2" />
+            </svg>
+            <span class="pill pill-rent">For Rent</span>
+            <div class="fav"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#6B7280"
+                stroke-width="1.8">
+                <path
+                  d="M12 21s-7.5-4.7-10-9.3C.6 8.1 2.6 4.5 6 4c2.3-.3 4.3 1 6 3 1.7-2 3.7-3.3 6-3 3.4.5 5.4 4.1 4 7.7-2.5 4.6-10 9.3-10 9.3z" />
+              </svg></div>
+          </div>
+          <div class="prop-body">
+            <h3>High-Rise Townhouse</h3>
+            <div class="prop-loc"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <path d="M12 21s7-6.4 7-12a7 7 0 1 0-14 0c0 5.6 7 12 7 12z" />
+              </svg> Southwestern Ontario, Ontario, Canada</div>
+            <div class="prop-stats"><span>4 Beds</span><span>3 Baths</span><span>2,280 Sqft</span></div>
+            <div class="prop-foot">
+              <div class="price">$1.239 <small>/Month</small></div><a class="btn btn-outline" href="#top">View
+                Detail</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="btn btn-solid view-all" href="#top">View All</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="wrap footer-grid">
+      <div>
+        <a class="footer-logo" href="#top">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M3 21h18M5 21V7l6-4 6 4v14M9 21v-6h4v6" />
+          </svg>
+          RealPro
+        </a>
+        <div class="foot-contact">
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M12 21s7-6.4 7-12a7 7 0 1 0-14 0c0 5.6 7 12 7 12z" />
+            </svg> 3755 St SE Salem, Corner with Sunny Boulevard, 37557, Australia</div>
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path
+                d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 2 .7 2.9a2 2 0 0 1-.4 2.1L8 10a16 16 0 0 0 6 6l1.3-1.4a2 2 0 0 1 2.1-.4c.9.4 1.9.6 2.9.7a2 2 0 0 1 1.7 2z" />
+            </svg> (305) 555-4446</div>
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path d="M4 4h16v16H4z" />
+              <path d="M4 6l8 7 8-7" />
+            </svg> youremail@gmail.com</div>
+        </div>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#top">About Us</a></li>
+          <li><a href="#top">Our Projects</a></li>
+          <li><a href="#top">Pricing</a></li>
+          <li><a href="#top">Testimonial</a></li>
+          <li><a href="#top">Appointment</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Links</h4>
+        <ul>
+          <li><a href="#top">Services</a></li>
+          <li><a href="#top">Contact</a></li>
+          <li><a href="#top">Home Buying</a></li>
+          <li><a href="#top">Our Team</a></li>
+          <li><a href="#top">Real Estate</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Subscribe</h4>
+        <p style="font-size:.82rem;color:var(--gray);margin:0 0 12px;">Sign Up for Our Newsletter to get Latest Updates
+          and Offers</p>
+        <div class="subscribe-row">
+          <input type="email" placeholder="Your Email">
+          <button>Subscribe</button>
+        </div>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="foot-social">
+        <a href="#top"><svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M22 5.9c-.7.3-1.5.5-2.3.6.8-.5 1.5-1.3 1.8-2.3-.8.5-1.7.8-2.6 1a4.1 4.1 0 0 0-7 3.7A11.6 11.6 0 0 1 3.4 4.6a4.1 4.1 0 0 0 1.3 5.5c-.7 0-1.3-.2-1.9-.5v.1c0 2 1.4 3.6 3.3 4a4.1 4.1 0 0 1-1.9.1 4.1 4.1 0 0 0 3.8 2.8A8.2 8.2 0 0 1 2 18.6a11.6 11.6 0 0 0 6.3 1.8c7.5 0 11.7-6.3 11.7-11.7v-.5c.8-.6 1.5-1.3 2-2.1z" />
+          </svg></a>
+        <a href="#top"><svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M14 8.5h2.5V5.3c-.4 0-1.9-.2-3.1-.2-3 0-4.6 1.9-4.6 5.1v2.6H6v3.5h2.8V22h3.6v-5.7h2.9l.5-3.5h-3.4v-2.2c0-1 .3-1.6 1.6-1.6z" />
+          </svg></a>
+        <a href="#top"><svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 8.4a3.6 3.6 0 1 0 0 7.2 3.6 3.6 0 0 0 0-7.2zm0 1.8a1.8 1.8 0 1 1 0 3.6 1.8 1.8 0 0 1 0-3.6zM16.3 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2zM8.5 3h7A5.5 5.5 0 0 1 21 8.5v7a5.5 5.5 0 0 1-5.5 5.5h-7A5.5 5.5 0 0 1 3 15.5v-7A5.5 5.5 0 0 1 8.5 3z" />
+          </svg></a>
+        <a href="#top"><svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M22 5.8s-.7.3-1.5.5c.5-.3.9-.8 1.1-1.4-.5.3-1.1.5-1.7.6a2.7 2.7 0 0 0-4.6 2.4A7.6 7.6 0 0 1 4 4.9a2.7 2.7 0 0 0 .8 3.6c-.4 0-.8-.1-1.2-.3v.1c0 1.3.9 2.4 2.2 2.7-.4.1-.8.1-1.2 0 .3 1.1 1.3 1.9 2.5 1.9A5.4 5.4 0 0 1 2 14.1a7.6 7.6 0 0 0 4.2 1.2c5 0 7.8-4.2 7.8-7.8v-.4c.5-.4 1-.9 1.4-1.4z" />
+          </svg></a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
