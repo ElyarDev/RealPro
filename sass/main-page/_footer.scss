@@ -59,6 +59,11 @@
             color: $color-general-3;
         }
 
+        form {
+            display: grid;
+            grid-template-columns: 1fr 10rem;
+        }
+
         &-input {
             padding: 1.2rem 3.6rem;
             border-radius: 1rem;
@@ -141,11 +146,12 @@
     }
 
     .footer__form {
-        grid-column: auto;
+        // grid-column: auto;
+        width: 100%;
     }
 
     .footer__form-input {
-        width: 100%;
+        width: 70%;
     }
 
     .footer__form-btn {

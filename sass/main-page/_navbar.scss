@@ -10,6 +10,7 @@
     align-items: center;
     padding: 2rem 0;
     gap: 2rem;
+    position: relative;
 
     &__logo {
         width: 100%;
@@ -31,6 +32,24 @@
             font-size: 1.6rem;
             font-weight: bold;
             color: $color-general-1;
+        }
+
+        &.is-open {
+            display: block;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background-color: $color-white;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+            padding: 2rem;
+            z-index: 100;
+
+            ul {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1.6rem;
+            }
         }
     }
 

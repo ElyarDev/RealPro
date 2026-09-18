@@ -1,121 +1,106 @@
-// MAIN PAGE
 .blog-section {
     max-width: 130rem;
     margin: 0 auto;
 }
 
 .blogs {
+    padding: 0 3rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
+    gap: 3.6rem;
+    margin-bottom: 8rem;
 }
 
 .blog {
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    margin-bottom: 4.6rem;
+    background-color: $color-white;
+    border-radius: 1.2rem;
+    overflow: hidden;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
+    // حالت اولیه
+    opacity: 0;
+    transform: translateY(8rem);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+
+    // وقتی به سکشن رسیدیم
+    &.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    // تأخیر کارت‌ها
+    &:nth-child(1) {
+        transition-delay: 0.1s;
+    }
+
+    &:nth-child(2) {
+        transition-delay: 0.3s;
+    }
+
+    &:nth-child(3) {
+        transition-delay: 0.5s;
+    }
 
     &__img {
+        display: block;
         width: 100%;
+        height: 24rem;
+        object-fit: cover;
+
+        transition: transform 0.5s ease;
+    }
+
+    &:hover &__img {
+        transform: scale(1.05);
     }
 
     &__text-box {
-        display: flex;
-        flex-direction: column;
+        padding: 2.8rem 2.4rem 3rem;
+    }
 
-        justify-content: center;
-        gap: 1.8rem;
-        padding: 3rem;
+    .heading-6 {
+        margin-bottom: 2rem;
+        line-height: 1.4;
     }
 
     &__icon-box {
-        margin-top: 1.6rem;
-        font-size: 1.4rem;
         display: flex;
-        gap: 4.6rem;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1.6rem;
+        margin-bottom: 2rem;
     }
 
     &__icon {
         display: flex;
         align-items: center;
+        gap: 0.7rem;
+
+        font-size: 1.3rem;
+        color: $color-general-2;
+
+        svg {
+            width: 1.6rem;
+            height: 1.6rem;
+            flex-shrink: 0;
+        }
     }
 
     &__text {
-        margin-top: -1.2rem;
-        font-size: 1.6rem;
+        p {
+            margin: 0;
+            font-size: 1.5rem;
+            line-height: 1.8;
+            color: $color-general-2;
+        }
     }
 
     &__btn {
         display: flex;
-        align-items: center;
         justify-content: center;
-    }
-}
-
-.active {
-    color: $color-primary;
-}
-
-// 1200px
-@media (max-width: 75em) {
-    .blogs {
-        gap: 2.4rem;
-    }
-
-    .blog {
-        &__text-box {
-            padding: 2.4rem;
-        }
-
-        &__icon-box {
-            gap: 2.4rem;
-        }
-    }
-}
-
-
-// 900px
-@media (max-width: 56.25em) {
-    .blogs {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-    }
-
-    .blog {
-        margin-bottom: 2rem;
-
-        &__text-box {
-            padding: 2rem;
-        }
-    }
-}
-
-
-// 600px
-@media (max-width: 37.5em) {
-    .blog-section {
-        padding: 0 1.6rem;
-    }
-
-    .blogs {
-        grid-template-columns: 1fr;
-        gap: 1.6rem;
-    }
-
-    .blog {
-        margin-bottom: 1.6rem;
-
-        &__text-box {
-            padding: 2rem 1.6rem;
-            gap: 1.4rem;
-        }
-
-        &__icon-box {
-            gap: 1.8rem;
-            font-size: 1.3rem;
-        }
-
-        &__text {
-            font-size: 1.5rem;
-        }
+        margin-top: 5.6rem;
     }
 }

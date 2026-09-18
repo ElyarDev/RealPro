@@ -12,12 +12,47 @@
     &__header {
         text-align: center;
         padding-top: 6rem;
+
+        // حالت اولیه
+        opacity: 0;
+        transform: translateY(4rem);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+
+        &.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 
     &__item {
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        // حالت اولیه
+        opacity: 0;
+        transform: translateY(6rem);
+        transition:
+            opacity 0.8s ease,
+            transform 0.8s ease;
+
+        &.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        // تأخیر برای هر کارت
+        &:nth-child(1).is-visible {
+            transition-delay: 0.1s;
+        }
+
+        &:nth-child(2).is-visible {
+            transition-delay: 0.25s;
+        }
+
+        &:nth-child(3).is-visible {
+            transition-delay: 0.4s;
+        }
     }
 
     &__icon-box {
@@ -27,13 +62,27 @@
         width: 30%;
         padding: 3rem 0;
         border-radius: 1rem;
-        box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+
+        box-shadow:
+            rgba(0, 0, 0, 0.07) 0px 1px 2px,
+            rgba(0, 0, 0, 0.07) 0px 2px 4px,
+            rgba(0, 0, 0, 0.07) 0px 4px 8px,
+            rgba(0, 0, 0, 0.07) 0px 8px 16px,
+            rgba(0, 0, 0, 0.07) 0px 16px 32px,
+            rgba(0, 0, 0, 0.07) 0px 32px 64px;
+
         margin-bottom: 2.5rem;
-        transition: all 0.2s;
+
+        transition:
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
 
         &:hover {
-            transform: rotate(-8deg) scale(1.1);
+            transform: translateY(-0.8rem) scale(1.05);
 
+            box-shadow:
+                rgba(0, 0, 0, 0.1) 0px 4px 8px,
+                rgba(0, 0, 0, 0.1) 0px 10px 20px;
         }
     }
 

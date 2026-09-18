@@ -6,7 +6,7 @@
 .agent {
     padding: 12.8rem 0;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     gap: 2.6rem;
 
     &__text-box {
@@ -45,16 +45,21 @@
 @media (max-width: 56.25em) {
     .agent {
         grid-template-columns: 1fr;
-        gap: 5rem;
-        padding: 8rem 0;
+        padding: 6.4rem 0;
+        gap: 3.2rem;
 
         &__text-box {
-            max-width: 70rem;
+            gap: 1.6rem;
+        }
+
+        &__title,
+        &__description {
+            font-size: 1.5rem;
         }
 
         &__img-box {
-            max-width: 70rem;
-            width: 100%;
+            grid-template-columns: 1fr;
+            gap: 1.2rem;
         }
     }
 }
