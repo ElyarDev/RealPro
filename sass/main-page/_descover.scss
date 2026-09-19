@@ -322,9 +322,8 @@
         }
 
         &__items {
-            // دو کارت در هر ردیف
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
             margin-bottom: 5rem;
         }
 
@@ -391,7 +390,7 @@
         &__items {
             // یک کارت در هر ردیف
             grid-template-columns: 1fr;
-            gap: 1.6rem;
+            gap: 5rem;
             margin-bottom: 4rem;
         }
 
