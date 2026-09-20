@@ -2447,7 +2447,7 @@ body {
 }
 .navbar__list a {
   text-decoration: none;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: bold;
   color: #1C1C1B;
 }
@@ -2472,6 +2472,9 @@ body {
   gap: 2.4rem;
   justify-content: center;
   align-items: center;
+}
+.navbar__active {
+  color: #0B3F6E !important;
 }
 .navbar__menu {
   display: none;
