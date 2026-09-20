@@ -2852,6 +2852,13 @@ body {
 .blog__pagination__list li a:hover {
   color: #0B3F6E;
 }
+.blog__pagination__active {
+  color: #FFFFFF !important;
+  background-color: #0B3F6E;
+  padding: 1rem;
+  border-radius: 10rem;
+  text-align: center;
+}
 
 @keyframes blogMainImage {
   0% {
