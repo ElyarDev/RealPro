@@ -4,12 +4,15 @@
 }
 
 .contact {
-    padding: 8rem 0;
+    padding: 8rem 2rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 3rem;
 
     &__img-box {
         img {
+            border-radius: 1rem;
+            width: 100%;
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         }
     }
@@ -48,10 +51,8 @@
     }
 }
 
-// ─────────────────────────────────────
-// Tablet
-// ─────────────────────────────────────
-
+// RESPONSIVE
+// TABLET
 @media (max-width: 56.25em) {
     .contact-section {
         padding: 0 2rem;
@@ -59,7 +60,7 @@
 
     .contact {
         padding: 6rem 0;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(2, 1fr);
         gap: 3rem;
 
         &__img-box {
@@ -90,11 +91,7 @@
     }
 }
 
-
-// ─────────────────────────────────────
-// Mobile
-// ─────────────────────────────────────
-
+// MOBILE
 @media (max-width: 37.5em) {
     .contact-section {
         padding: 0 1.6rem;
@@ -140,11 +137,7 @@
     }
 }
 
-
-// ─────────────────────────────────────
-// Small Mobile
-// ─────────────────────────────────────
-
+// SMALL MOBILE
 @media (max-width: 25em) {
     .contact {
         padding: 4rem 0;

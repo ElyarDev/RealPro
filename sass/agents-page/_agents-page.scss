@@ -1,3 +1,4 @@
+// AGENTS
 .agents {
     padding: 8rem 0 2rem 0;
 
@@ -19,10 +20,8 @@
     }
 }
 
-// ─────────────────────────────────────
-// Tablet
-// ─────────────────────────────────────
-
+// RESPONSIVE
+// TABLET
 @media (max-width: 56.25em) {
     .agents {
         padding: 6rem 2rem 2rem;
@@ -40,11 +39,7 @@
     }
 }
 
-
-// ─────────────────────────────────────
-// Mobile
-// ─────────────────────────────────────
-
+// MOBILE
 @media (max-width: 37.5em) {
     .agents {
         padding: 5rem 1.6rem 2rem;
@@ -67,11 +62,7 @@
     }
 }
 
-
-// ─────────────────────────────────────
-// Small Mobile
-// ─────────────────────────────────────
-
+// SMALL MOBILE
 @media (max-width: 25em) {
     .agents {
         padding: 4rem 1.2rem 1.5rem;

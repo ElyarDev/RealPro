@@ -4,7 +4,7 @@
 }
 
 .map {
-    padding: 12.8rem 0 5.6rem 0;
+    padding: 12.8rem 2rem 5.6rem 2rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 6rem;
@@ -43,10 +43,7 @@
     }
 }
 
-// ─────────────────────────────────────
-// Tablet
-// ─────────────────────────────────────
-
+// TABLET
 @media (max-width: 56.25em) {
     .contactmap-section {
         padding: 0 2rem;
@@ -79,11 +76,7 @@
     }
 }
 
-
-// ─────────────────────────────────────
-// Mobile
-// ─────────────────────────────────────
-
+// MOBILE
 @media (max-width: 37.5em) {
     .contactmap-section {
         padding: 0 1.6rem;
@@ -126,11 +119,7 @@
     }
 }
 
-
-// ─────────────────────────────────────
-// Small Mobile
-// ─────────────────────────────────────
-
+// SMALL MOBILE
 @media (max-width: 25em) {
     .map {
         padding: 5rem 0 3.5rem;
