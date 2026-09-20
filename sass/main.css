@@ -93,8 +93,7 @@ body {
   transform: translateY(0) scale(0.97);
 }
 .btn--shop {
-  transform: translateY(-4rem);
-  margin-bottom: -4rem;
+  margin-top: 2rem;
   padding: 0.8rem 8rem;
   transition: all 0.3s ease;
 }
@@ -2543,6 +2542,9 @@ body {
   margin: 0 auto;
 }
 
+.shop__title {
+  padding: 0 2rem;
+}
 .shop__container {
   display: grid;
   grid-template-columns: 3fr 1fr;
@@ -2554,6 +2556,7 @@ body {
   gap: 2.2rem;
 }
 .shop__item {
+  margin-top: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2574,16 +2577,16 @@ body {
   color: #254B86;
 }
 
-.cart {
+.shop__cart {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
-.cart__title {
+.shop__cart__title {
   font-size: 2.2rem;
   font-weight: bold;
 }
-.cart__category {
+.shop__cart__category {
   padding: 3rem;
   border: 1px solid #B0B0B0;
   border-radius: 1rem;
@@ -2591,7 +2594,7 @@ body {
   flex-direction: column;
   align-items: start;
 }
-.cart__category__list {
+.shop__cart__category__list {
   color: #636366;
   display: flex;
   flex-direction: column;
@@ -2600,10 +2603,10 @@ body {
   font-size: 1.6rem;
   font-weight: bold;
 }
-.cart__category__list li {
+.shop__cart__category__list li {
   list-style: none;
 }
-.cart__size {
+.shop__cart__size {
   padding: 3rem;
   border: 1px solid #B0B0B0;
   border-radius: 1rem;
@@ -2611,7 +2614,7 @@ body {
   flex-direction: column;
   align-items: start;
 }
-.cart__size__list {
+.shop__cart__size__list {
   color: #636366;
   display: flex;
   flex-direction: column;
@@ -2620,10 +2623,11 @@ body {
   font-size: 1.6rem;
   font-weight: bold;
 }
-.cart__size__list li {
+.shop__cart__size__list li {
   list-style: none;
 }
-.cart__tags {
+.shop__cart__tags {
+  margin: 5rem 0;
   padding: 3rem;
   border: 1px solid #B0B0B0;
   border-radius: 1rem;
@@ -2631,13 +2635,13 @@ body {
   flex-direction: column;
   align-items: start;
 }
-.cart__tags__box {
+.shop__cart__tags__box {
   margin-top: 1.2rem;
   display: flex;
   flex-wrap: wrap;
   gap: 0.8rem;
 }
-.cart__tag {
+.shop__cart__tag {
   font-size: 1.4rem;
   background-color: #F2F2F2;
   color: #636366;
