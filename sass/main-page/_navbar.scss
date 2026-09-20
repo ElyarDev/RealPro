@@ -5,12 +5,20 @@
 }
 
 .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 0;
+
+    padding: 2rem 5.6rem;
     gap: 2rem;
-    position: relative;
+
+    background-color: $color-white;
 
     &__logo {
         width: 100%;
@@ -25,6 +33,8 @@
             align-items: center;
             gap: 2.8rem;
             list-style: none;
+            margin: 0;
+            padding: 0;
         }
 
         a {
@@ -40,8 +50,10 @@
             top: 100%;
             left: 0;
             right: 0;
+
             background-color: $color-white;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+
             padding: 2rem;
             z-index: 100;
 

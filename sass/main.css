@@ -5,6 +5,7 @@ html {
 
 body {
   font-family: "Lato", sans-serif;
+  padding-top: 8rem;
 }
 
 .btn {
@@ -98,7 +99,7 @@ body {
   transition: all 0.3s ease;
 }
 .btn--shop:hover {
-  transform: translateY(-4.4rem);
+  transform: translateY(-0.4rem);
   box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.12);
 }
 .btn--shop:active {
@@ -2425,12 +2426,17 @@ body {
 }
 
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 0;
+  padding: 2rem 5.6rem;
   gap: 2rem;
-  position: relative;
+  background-color: #FFFFFF;
 }
 .navbar__logo {
   width: 100%;
@@ -2443,6 +2449,8 @@ body {
   align-items: center;
   gap: 2.8rem;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 .navbar__list a {
   text-decoration: none;
