@@ -60,6 +60,9 @@
     }
 
     &--outline {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         position: relative;
         overflow: hidden;
         border: 2px solid $color-primary-light-2;
