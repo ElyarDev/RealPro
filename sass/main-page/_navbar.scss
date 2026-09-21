@@ -87,9 +87,9 @@
     }
 }
 
-
+// RESPONSIVE
 // 900px
-@media (max-width: 56.25em) {
+@media (max-width: 75em) {
 
     .navbar {
         &__list {
@@ -111,7 +111,7 @@
     }
 
     .navbar {
-        padding: 1.6rem 0;
+        padding: 1.6rem 0.8rem;
 
         &__logo {
             max-width: 11rem;

@@ -1,4 +1,9 @@
 @charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -60,6 +65,9 @@ body {
 .btn--full:active {
   transform: translateY(0) scale(0.97);
   box-shadow: none;
+}
+.btn--logout {
+  background-color: #fa5252;
 }
 .btn--outline {
   display: flex;
@@ -136,6 +144,11 @@ body {
   line-height: 1.4;
 }
 
+@media (max-width: 62.5em) {
+  .heading-1 {
+    text-align: center;
+  }
+}
 .contact-section {
   max-width: 130rem;
   margin: 0 auto;
@@ -1204,7 +1217,7 @@ body {
 }
 
 .agent {
-  padding: 12.8rem 0;
+  padding: 12.8rem 2rem;
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 2.6rem;
@@ -1226,6 +1239,14 @@ body {
 .agent__img-box {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+.agent__img-box img {
+  width: 90%;
+  height: 100%;
+  display: block;
+  margin: 0 auto;
 }
 
 @media (max-width: 75em) {
@@ -1277,7 +1298,7 @@ body {
 }
 
 .area {
-  padding: 6rem 0;
+  padding: 6rem 2rem;
 }
 .area__top {
   padding: 4.2rem 0;
@@ -1294,10 +1315,13 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin-bottom: 2.5rem;
+  gap: 2.5rem;
+  width: 100%;
 }
 .area__img-box-2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
 }
 
 @media (max-width: 75em) {
@@ -2027,8 +2051,11 @@ body {
   margin: 0 auto;
 }
 
+.features {
+  padding: 5.6rem 2rem 7rem 0;
+}
 .features__top {
-  padding: 4.2rem 0;
+  padding: 4.2rem 2rem;
 }
 .features__top span {
   font-size: 1.6rem;
@@ -2079,17 +2106,17 @@ body {
 }
 @media (max-width: 56.25em) {
   .features__top {
-    padding: 3rem 0;
+    padding: 3rem 1.6rem;
   }
   .features__container {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
   .feature {
-    padding: 2.4rem 2rem;
+    padding: 2.4rem 5rem;
   }
   .feature__title {
-    font-size: 2.2rem;
+    font-size: 2rem;
     margin: 2rem 0;
   }
 }
@@ -2255,7 +2282,7 @@ body {
 }
 
 .hero {
-  padding: 5.6rem 0;
+  padding: 5.6rem 2rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
@@ -2370,8 +2397,11 @@ body {
 }
 @media (max-width: 75em) {
   .hero {
-    padding: 5rem 0;
+    padding: 5rem 1.8rem;
     gap: 3rem;
+  }
+  .hero__text-box {
+    align-items: center;
   }
   .hero__img {
     width: 80%;
@@ -2500,7 +2530,7 @@ body {
   color: #1C1C1B;
 }
 
-@media (max-width: 56.25em) {
+@media (max-width: 75em) {
   .navbar__list {
     display: none;
   }
@@ -2513,7 +2543,7 @@ body {
     padding: 0 1.6rem;
   }
   .navbar {
-    padding: 1.6rem 0;
+    padding: 1.6rem 0.8rem;
   }
   .navbar__logo {
     max-width: 11rem;

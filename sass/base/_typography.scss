@@ -24,3 +24,10 @@
     margin: 0;
     line-height: 1.4;
 }
+
+// TABLET
+@media (max-width: 62.5em) {
+    .heading-1 {
+        text-align: center;
+    }
+}
