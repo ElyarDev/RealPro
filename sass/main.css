@@ -39,7 +39,7 @@ body {
   overflow: hidden;
   border: none;
   background-color: #254B86;
-  padding: 1.4rem 3.2rem;
+  padding: 1.4rem 3rem;
   color: #FFFFFF;
   border-radius: 1rem;
   transition: transform 0.25s ease, box-shadow 0.3s ease;
@@ -738,7 +738,7 @@ body {
 
 @media (max-width: 56.25em) {
   .agents {
-    padding: 6rem 2rem 2rem;
+    padding: 6rem 2rem 0 2rem;
   }
   .agents__new__img-box {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -752,7 +752,7 @@ body {
 }
 @media (max-width: 37.5em) {
   .agents {
-    padding: 5rem 1.6rem 2rem;
+    padding: 5rem 1.6rem 0 1.6rem;
   }
   .agents__new__img-box {
     grid-template-columns: 1fr;
@@ -770,10 +770,9 @@ body {
 }
 @media (max-width: 25em) {
   .agents {
-    padding: 4rem 1.2rem 1.5rem;
+    padding: 4rem 1.2rem 0 1.2rem;
   }
   .agents__new__img-box {
-    gap: 2.5rem;
     margin-bottom: 3.5rem;
   }
   .agents__new__img-box img {
@@ -2052,7 +2051,7 @@ body {
 }
 
 .features {
-  padding: 5.6rem 2rem 7rem 0;
+  padding: 5.6rem 2rem 7rem 2rem;
 }
 .features__top {
   padding: 4.2rem 2rem;
@@ -2087,7 +2086,7 @@ body {
 }
 .feature__text {
   font-size: 1.6rem;
-  margin: 0 auto;
+  text-align: center;
 }
 .feature__active {
   color: #0059A4;
@@ -2570,7 +2569,7 @@ body {
   padding: 4.2rem 0;
 }
 .property__title {
-  font-size: 4.8rem;
+  font-size: 3rem;
   font-weight: bold;
 }
 .property__filter {
