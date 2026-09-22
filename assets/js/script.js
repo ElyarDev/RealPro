@@ -150,3 +150,40 @@ products.forEach(function (product) {
         product.remove();
     })
 })
+
+// PROPERTY DETAILS SLIDER 
+const slider = document.querySelector('.property-details-image-box');
+
+let isDown = false;
+let startX;
+let scrollLeft;
+
+slider.addEventListener('mousedown', function (e) {
+    isDown = true;
+
+    startX = e.pageX - slider.offsetLeft;
+    scrollLeft = slider.scrollLeft;
+
+    slider.style.cursor = 'grabbing';
+});
+
+slider.addEventListener('mouseleave', function () {
+    isDown = false;
+    slider.style.cursor = 'grab';
+});
+
+slider.addEventListener('mouseup', function () {
+    isDown = false;
+    slider.style.cursor = 'grab';
+});
+
+slider.addEventListener('mousemove', function (e) {
+    if (!isDown) return;
+
+    e.preventDefault();
+
+    const x = e.pageX - slider.offsetLeft;
+    const walk = (x - startX) * 2;
+
+    slider.scrollLeft = scrollLeft - walk;
+});
