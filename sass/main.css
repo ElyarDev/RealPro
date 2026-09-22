@@ -3355,7 +3355,7 @@ body {
 .checkout-form__input {
   width: 100%;
   height: 5.4rem;
-  padding: 0 1.6rem;
+  padding: 0 0.8rem;
   border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 0.8rem;
   background-color: transparent;
@@ -3398,37 +3398,6 @@ body {
 .checkout-form__textarea:focus {
   border-color: #254B86;
   box-shadow: 0 0 0 0.3rem rgba(0, 70, 160, 0.08);
-}
-
-.checkout-payment {
-  margin-top: 2.8rem;
-}
-.checkout-payment__title {
-  margin: 0 0 1.8rem;
-  font-size: 1.7rem;
-  font-weight: 600;
-  color: #636366;
-}
-.checkout-payment__methods {
-  display: flex;
-  align-items: center;
-  gap: 6rem;
-  flex-wrap: wrap;
-}
-.checkout-payment__method {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  font-size: 1.4rem;
-  color: #636366;
-  cursor: pointer;
-}
-.checkout-payment__method input {
-  width: 1.7rem;
-  height: 1.7rem;
-  margin: 0;
-  accent-color: #254B86;
-  cursor: pointer;
 }
 
 .order-box {
