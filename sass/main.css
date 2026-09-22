@@ -1142,7 +1142,7 @@ body {
   text-decoration: underline;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 37.5em) {
   .login {
     padding: 1.5rem;
   }
@@ -1289,7 +1289,7 @@ body {
   text-decoration: underline;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 37.5em) {
   .signup {
     padding: 1.5rem;
   }
@@ -2258,7 +2258,7 @@ body {
 .footer {
   max-width: 130rem;
   margin: 0 auto;
-  padding: 8rem 3rem;
+  padding: 4rem 3rem;
   display: grid;
   grid-template-columns: 1fr 0.5fr 0.5fr 0.5fr;
 }
@@ -2767,10 +2767,6 @@ body {
   border-radius: 1rem;
 }
 
-/* ================================
-   SHOP RESPONSIVE
-================================ */
-/* Tablet */
 @media (max-width: 75em) {
   .shop {
     padding: 5rem 2rem;
@@ -2793,7 +2789,6 @@ body {
     padding: 2.2rem;
   }
 }
-/* Small Tablet */
 @media (max-width: 60em) {
   .shop {
     padding: 4.5rem 2rem;
@@ -2828,7 +2823,6 @@ body {
     grid-column: 1/-1;
   }
 }
-/* Mobile */
 @media (max-width: 48em) {
   .shop {
     padding: 4rem 2rem;
@@ -2881,7 +2875,6 @@ body {
     padding: 1rem;
   }
 }
-/* Small Mobile */
 @media (max-width: 30em) {
   .shop {
     padding: 3.5rem 1.2rem;
@@ -3254,9 +3247,11 @@ body {
 .checkout-section {
   max-width: 130rem;
   margin: 0 auto;
-  padding: 14rem 2.4rem 8rem;
 }
 
+.checkout {
+  padding: 8rem 2.4rem;
+}
 .checkout__header {
   margin-bottom: 5rem;
 }
@@ -3457,7 +3452,7 @@ body {
   transform: translateY(0);
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 62.5em) {
   .checkout-section {
     padding: 4rem 2.4rem 6rem;
   }
@@ -3472,7 +3467,7 @@ body {
     max-width: 100%;
   }
 }
-@media (max-width: 700px) {
+@media (max-width: 43.75em) {
   .checkout-section {
     padding: 3.5rem 1.8rem 5rem;
   }
@@ -3497,7 +3492,7 @@ body {
     gap: 2rem 3rem;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 30em) {
   .checkout-section {
     padding: 3rem 1.5rem 4rem;
   }
@@ -3559,15 +3554,26 @@ body {
 .cart__coupon {
   margin: 4rem 0;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
 }
 .cart__coupon span {
   font-size: 1.8rem;
   font-weight: bold;
+  white-space: nowrap;
 }
 .cart__coupon input {
-  width: 50%;
+  flex: 1;
+  min-width: 0;
+  padding: 1.2rem 1.4rem;
+  border: 1px solid #B0B0B0;
+  border-radius: 0.8rem;
+  outline: none;
+  font-size: 1.4rem;
+}
+.cart__coupon input:focus {
+  border-color: #254B86;
 }
 .cart__price-box {
   display: flex;
