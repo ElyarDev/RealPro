@@ -345,7 +345,6 @@ body {
        object-fit: cover;
   }
   .contact__login-box {
-    width: 100%;
     padding: 2.5rem 2rem;
     gap: 1.6rem;
   }
