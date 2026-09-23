@@ -114,19 +114,14 @@
         }
 
         &:active {
-            transform: translateY(-4rem) scale(0.97);
+            transform: translateY(-0.4rem) scale(0.97);
         }
     }
 }
 
-/* ================================
-   BUTTONS RESPONSIVE
-================================ */
-
+//   BUTTONS RESPONSIVE
 @media (max-width: 60em) {
-
     .btn {
-
         &--full {
             padding: 1.3rem 2.6rem;
         }
@@ -144,9 +139,7 @@
 
 
 @media (max-width: 48em) {
-
     .btn {
-
         &--transparent {
             font-size: 1.6rem;
         }
@@ -170,11 +163,8 @@
     }
 }
 
-
 @media (max-width: 30em) {
-
     .btn {
-
         &--transparent {
             font-size: 1.5rem;
         }

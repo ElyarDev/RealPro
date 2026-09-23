@@ -114,12 +114,9 @@ body {
   box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.12);
 }
 .btn--shop:active {
-  transform: translateY(-4rem) scale(0.97);
+  transform: translateY(-0.4rem) scale(0.97);
 }
 
-/* ================================
-   BUTTONS RESPONSIVE
-================================ */
 @media (max-width: 60em) {
   .btn--full {
     padding: 1.3rem 2.6rem;
@@ -3698,7 +3695,6 @@ body {
 .property-details-section {
   max-width: 130rem;
   margin: 0 auto;
-  padding: 0 2.4rem;
 }
 
 .property-details {
@@ -3716,8 +3712,7 @@ body {
   min-width: 0;
 }
 .property-details__star {
-  margin-top: -2rem;
-  font-size: 1.6rem;
+  font-size: 2rem;
   color: rgb(214, 145, 16);
 }
 .property-details__address {
@@ -3839,14 +3834,13 @@ body {
   align-self: start;
   border: 1px solid #D1D1D1;
   border-radius: 1rem;
-  overflow: hidden;
 }
 .property-details__ft {
   font-size: 1.4rem;
   color: #636366;
 }
 .property-details__profile-box {
-  width: 100%;
+  width: 80%;
   margin-top: 3rem;
   padding-top: 3rem;
   display: flex;
