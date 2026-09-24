@@ -122,6 +122,8 @@ logOutBtn.addEventListener('click', function () {
 //     progressCircle.style.strokeDashoffset = offset;
 // }
 
+// ------------------------------------------------------------------------------------------------
+
 const preloader = document.querySelector("#preloader");
 const percentage = document.querySelector("#loaderPercentage");
 const progressCircle = document.querySelector(
