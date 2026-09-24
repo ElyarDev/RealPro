@@ -33,6 +33,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+// ------------------------------------------------------------------------------------------------
+
 // LOGOUT ALERT
 const logOutBtn = document.querySelector('.btn--logout');
 
@@ -40,12 +42,12 @@ logOutBtn.addEventListener('click', function () {
     alert('you logged out');
 })
 
+// ------------------------------------------------------------------------------------------------
+
 // PRELOADER
 const preloader = document.querySelector("#preloader");
 const percentage = document.querySelector("#loaderPercentage");
-const progressCircle = document.querySelector(
-    ".preloader__circle-progress"
-);
+const progressCircle = document.querySelector(".preloader__circle-progress");
 
 let progress = 0;
 
@@ -56,13 +58,7 @@ if (progressCircle) {
     progressCircle.style.strokeDashoffset = circumference;
 }
 
-
-// -----------------------------
-// Update progress
-// -----------------------------
-
 function updateProgress(value) {
-
     value = Math.min(100, Math.max(0, value));
 
     if (percentage) {
@@ -78,11 +74,6 @@ function updateProgress(value) {
         progressCircle.style.strokeDashoffset = offset;
     }
 }
-
-
-// -----------------------------
-// Fake progress while page loads
-// -----------------------------
 
 const loadingAnimation = setInterval(() => {
 
@@ -103,17 +94,10 @@ const loadingAnimation = setInterval(() => {
 
 }, 50);
 
-
-// -----------------------------
-// When everything is loaded
-// -----------------------------
-
 window.addEventListener("load", () => {
-
     clearInterval(loadingAnimation);
 
     const finishAnimation = setInterval(() => {
-
         progress += 2;
 
         if (progress >= 100) {
@@ -136,9 +120,6 @@ window.addEventListener("load", () => {
 
             }, 300);
         }
-
         updateProgress(progress);
-
     }, 20);
-
 });

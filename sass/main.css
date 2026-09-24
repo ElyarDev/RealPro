@@ -1575,7 +1575,7 @@ body {
     gap: 1.4rem;
   }
   .agent__img-box img {
-    width: 60%;
+    width: 80%;
   }
 }
 @media (max-width: 37.5em) {
