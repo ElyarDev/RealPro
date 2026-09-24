@@ -44,25 +44,107 @@ logOutBtn.addEventListener('click', function () {
 
 // ------------------------------------------------------------------------------------------------
 
-// PRELOADER
+// // PRELOADER
+// const preloader = document.querySelector("#preloader");
+// const percentage = document.querySelector("#loaderPercentage");
+// const progressCircle = document.querySelector(
+//     ".preloader__circle-progress"
+// );
+
+// let progress = 0;
+
+// const circumference = 2 * Math.PI * 54;
+
+// progressCircle.style.strokeDasharray = circumference;
+// progressCircle.style.strokeDashoffset = circumference;
+
+
+// // شروع درصد
+// const loadingAnimation = setInterval(() => {
+
+//     progress += 5;
+
+//     if (progress >= 90) {
+//         progress = 90;
+//         clearInterval(loadingAnimation);
+//     }
+
+//     updateProgress(progress);
+
+// }, 40);
+
+
+// // وقتی صفحه لود شد
+// window.addEventListener("load", () => {
+
+//     clearInterval(loadingAnimation);
+
+//     const finishAnimation = setInterval(() => {
+
+//         progress += 5;
+
+//         if (progress >= 100) {
+
+//             progress = 100;
+
+//             clearInterval(finishAnimation);
+
+//             updateProgress(100);
+
+//             setTimeout(() => {
+
+//                 preloader.style.opacity = "0";
+//                 preloader.style.visibility = "hidden";
+//                 preloader.style.pointerEvents = "none";
+
+//                 setTimeout(() => {
+//                     preloader.remove();
+//                 }, 500);
+
+//             }, 150);
+//         }
+
+//         updateProgress(progress);
+
+//     }, 20);
+
+// });
+
+
+// function updateProgress(value) {
+
+//     percentage.textContent = Math.floor(value);
+
+//     const offset =
+//         circumference -
+//         (value / 100) * circumference;
+
+//     progressCircle.style.strokeDashoffset = offset;
+// }
+
 const preloader = document.querySelector("#preloader");
 const percentage = document.querySelector("#loaderPercentage");
-const progressCircle = document.querySelector(".preloader__circle-progress");
+const progressCircle = document.querySelector(
+    ".preloader__circle-progress"
+);
 
 let progress = 0;
 
 const circumference = 2 * Math.PI * 54;
 
 if (progressCircle) {
-    progressCircle.style.strokeDasharray = circumference;
-    progressCircle.style.strokeDashoffset = circumference;
+
+    progressCircle.style.strokeDasharray =
+        circumference;
+
+    progressCircle.style.strokeDashoffset =
+        circumference;
 }
 
 function updateProgress(value) {
-    value = Math.min(100, Math.max(0, value));
-
     if (percentage) {
-        percentage.textContent = Math.floor(value);
+        percentage.textContent =
+            Math.floor(value);
     }
 
     if (progressCircle) {
@@ -71,55 +153,64 @@ function updateProgress(value) {
             circumference -
             (value / 100) * circumference;
 
-        progressCircle.style.strokeDashoffset = offset;
+        progressCircle.style.strokeDashoffset =
+            offset;
     }
 }
 
 const loadingAnimation = setInterval(() => {
+    progress += 5;
 
-    if (progress < 70) {
-
-        progress += 1;
-
-    } else if (progress < 85) {
-
-        progress += 0.3;
-
-    } else if (progress < 95) {
-
-        progress += 0.1;
+    if (progress >= 90) {
+        progress = 90;
+        clearInterval(loadingAnimation);
     }
 
     updateProgress(progress);
-
-}, 50);
+}, 40);
 
 window.addEventListener("load", () => {
     clearInterval(loadingAnimation);
 
     const finishAnimation = setInterval(() => {
-        progress += 2;
+        progress += 5;
 
         if (progress >= 100) {
-
             progress = 100;
-
             clearInterval(finishAnimation);
-
             updateProgress(100);
+
 
             setTimeout(() => {
 
-                preloader.style.opacity = "0";
-                preloader.style.visibility = "hidden";
-                preloader.style.pointerEvents = "none";
+                if (preloader) {
+
+                    preloader.style.opacity = "0";
+
+                    preloader.style.visibility =
+                        "hidden";
+
+                    preloader.style.pointerEvents =
+                        "none";
+                } -
+
+                    document.body.classList.add(
+                        "page-loaded"
+                    );
 
                 setTimeout(() => {
-                    preloader.remove();
-                }, 800);
 
-            }, 300);
+                    if (preloader) {
+                        preloader.remove();
+                    }
+
+                }, 500);
+
+            }, 150);
         }
+
         updateProgress(progress);
+
     }, 20);
+
 });

@@ -2566,18 +2566,15 @@ body {
 .hero__subtitle {
   font-size: 2.2rem;
   opacity: 0;
-  animation: heroFadeUp 0.7s ease-out 0.1s forwards;
 }
 .hero__title-wrapper {
   overflow: hidden;
 }
 .hero__title {
   opacity: 0;
-  animation: heroTitleReveal 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.25s forwards;
 }
 .hero__btn {
   opacity: 0;
-  animation: heroFadeUp 0.7s ease-out 0.5s forwards;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .hero__btn:hover {
@@ -2589,14 +2586,12 @@ body {
   display: flex;
   justify-content: flex-end;
   opacity: 0;
-  animation: heroImageEnter 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
 }
 .hero__img {
   position: relative;
   width: 75%;
   display: block;
   z-index: 2;
-  animation: heroImageFloat 5s ease-in-out 1.3s infinite;
 }
 .hero__glow {
   position: absolute;
@@ -2609,8 +2604,26 @@ body {
   background: rgba(255, 255, 255, 0.15);
   filter: blur(6rem);
   opacity: 0;
-  animation: heroGlow 1.5s ease-out 0.8s forwards;
   z-index: 1;
+}
+
+body.page-loaded .hero__subtitle {
+  animation: heroFadeUp 0.7s ease-out 0.1s forwards;
+}
+body.page-loaded .hero__title {
+  animation: heroTitleReveal 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.25s forwards;
+}
+body.page-loaded .hero__btn {
+  animation: heroFadeUp 0.7s ease-out 0.5s forwards;
+}
+body.page-loaded .hero__image-wrapper {
+  animation: heroImageEnter 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
+}
+body.page-loaded .hero__img {
+  animation: heroImageFloat 5s ease-in-out 1.3s infinite;
+}
+body.page-loaded .hero__glow {
+  animation: heroGlow 1.5s ease-out 0.8s forwards;
 }
 
 @keyframes heroFadeUp {
@@ -2722,7 +2735,7 @@ body {
   .hero__image-wrapper,
   .hero__img,
   .hero__glow {
-    animation: none;
+    animation: none !important;
     opacity: 1;
     transform: none;
   }
