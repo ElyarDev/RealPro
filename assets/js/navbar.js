@@ -41,54 +41,104 @@ logOutBtn.addEventListener('click', function () {
 })
 
 // PRELOADER
-document.addEventListener("DOMContentLoaded", () => {
+const preloader = document.querySelector("#preloader");
+const percentage = document.querySelector("#loaderPercentage");
+const progressCircle = document.querySelector(
+    ".preloader__circle-progress"
+);
 
-    const preloader = document.querySelector("#preloader");
-    const percentage = document.querySelector("#loaderPercentage");
-    const progressCircle = document.querySelector(".preloader__circle-progress");
+let progress = 0;
 
-    if (!preloader || !percentage || !progressCircle) {
-        console.log("Preloader elements not found!");
-        return;
-    }
+const circumference = 2 * Math.PI * 54;
 
-    let progress = 0;
-
-    const circumference = 2 * Math.PI * 54;
-
+if (progressCircle) {
     progressCircle.style.strokeDasharray = circumference;
     progressCircle.style.strokeDashoffset = circumference;
+}
 
-    const loading = setInterval(() => {
 
-        progress += 2;
+// -----------------------------
+// Update progress
+// -----------------------------
 
-        if (progress > 100) {
-            progress = 100;
-        }
+function updateProgress(value) {
 
-        percentage.textContent = progress;
+    value = Math.min(100, Math.max(0, value));
+
+    if (percentage) {
+        percentage.textContent = Math.floor(value);
+    }
+
+    if (progressCircle) {
 
         const offset =
             circumference -
-            (progress / 100) * circumference;
+            (value / 100) * circumference;
 
         progressCircle.style.strokeDashoffset = offset;
+    }
+}
 
-        if (progress === 100) {
 
-            clearInterval(loading);
+// -----------------------------
+// Fake progress while page loads
+// -----------------------------
+
+const loadingAnimation = setInterval(() => {
+
+    if (progress < 70) {
+
+        progress += 1;
+
+    } else if (progress < 85) {
+
+        progress += 0.3;
+
+    } else if (progress < 95) {
+
+        progress += 0.1;
+    }
+
+    updateProgress(progress);
+
+}, 50);
+
+
+// -----------------------------
+// When everything is loaded
+// -----------------------------
+
+window.addEventListener("load", () => {
+
+    clearInterval(loadingAnimation);
+
+    const finishAnimation = setInterval(() => {
+
+        progress += 2;
+
+        if (progress >= 100) {
+
+            progress = 100;
+
+            clearInterval(finishAnimation);
+
+            updateProgress(100);
 
             setTimeout(() => {
+
                 preloader.style.opacity = "0";
                 preloader.style.visibility = "hidden";
                 preloader.style.pointerEvents = "none";
 
                 setTimeout(() => {
                     preloader.remove();
-                }, 900);
+                }, 800);
 
-            }, 500);
+            }, 300);
         }
-    }, 30);
+
+        updateProgress(progress);
+
+    }, 20);
+
 });
