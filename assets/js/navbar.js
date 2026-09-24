@@ -39,3 +39,56 @@ const logOutBtn = document.querySelector('.btn--logout');
 logOutBtn.addEventListener('click', function () {
     alert('you logged out');
 })
+
+// PRELOADER
+document.addEventListener("DOMContentLoaded", () => {
+
+    const preloader = document.querySelector("#preloader");
+    const percentage = document.querySelector("#loaderPercentage");
+    const progressCircle = document.querySelector(".preloader__circle-progress");
+
+    if (!preloader || !percentage || !progressCircle) {
+        console.log("Preloader elements not found!");
+        return;
+    }
+
+    let progress = 0;
+
+    const circumference = 2 * Math.PI * 54;
+
+    progressCircle.style.strokeDasharray = circumference;
+    progressCircle.style.strokeDashoffset = circumference;
+
+    const loading = setInterval(() => {
+
+        progress += 2;
+
+        if (progress > 100) {
+            progress = 100;
+        }
+
+        percentage.textContent = progress;
+
+        const offset =
+            circumference -
+            (progress / 100) * circumference;
+
+        progressCircle.style.strokeDashoffset = offset;
+
+        if (progress === 100) {
+
+            clearInterval(loading);
+
+            setTimeout(() => {
+                preloader.style.opacity = "0";
+                preloader.style.visibility = "hidden";
+                preloader.style.pointerEvents = "none";
+
+                setTimeout(() => {
+                    preloader.remove();
+                }, 900);
+
+            }, 500);
+        }
+    }, 30);
+});
