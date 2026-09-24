@@ -150,22 +150,21 @@ body {
 }
 @media (max-width: 30em) {
   .btn--transparent {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   .btn--full {
-    width: 100%;
-    font-size: 1.4rem;
+    font-size: 1rem;
     padding: 1.1rem 1.8rem;
   }
   .btn--outline {
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding: 0.7rem 1.1rem;
   }
   .btn--shop {
     width: 100%;
     margin-top: 1.5rem;
     padding: 1rem 1.5rem;
-    font-size: 1.4rem;
+    font-size: 1rem;
   }
 }
 .pagination {
@@ -2710,7 +2709,7 @@ body {
     gap: 2rem;
   }
   .hero__subtitle {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
   .hero__img {
     width: 85%;
@@ -2818,7 +2817,7 @@ body {
     padding: 1.6rem 0.8rem;
   }
   .navbar__logo {
-    max-width: 13rem;
+    max-width: 10rem;
   }
   .navbar__btns {
     gap: 1rem;
@@ -3731,8 +3730,6 @@ body {
   white-space: nowrap;
 }
 .cart__coupon input {
-  flex: 1;
-  min-width: 0;
   padding: 1.2rem 1.4rem;
   border: 1px solid #B0B0B0;
   border-radius: 0.8rem;
@@ -3817,11 +3814,11 @@ body {
   }
   .cart__order {
     max-width: 60rem;
-    width: 100%;
+    width: 80%;
     margin: 0 auto;
   }
   .cart__coupon input {
-    width: 45%;
+    width: 80%;
   }
   .product__img {
     width: 15%;
@@ -3843,7 +3840,7 @@ body {
     gap: 1.5rem;
   }
   .cart__coupon input {
-    width: 100%;
+    width: 90%;
   }
   .cart__price {
     font-size: 2.4rem;
