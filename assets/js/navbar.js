@@ -126,9 +126,7 @@ logOutBtn.addEventListener('click', function () {
 
 const preloader = document.querySelector("#preloader");
 const percentage = document.querySelector("#loaderPercentage");
-const progressCircle = document.querySelector(
-    ".preloader__circle-progress"
-);
+const progressCircle = document.querySelector(".preloader__circle-progress");
 
 let progress = 0;
 
