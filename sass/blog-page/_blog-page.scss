@@ -1,3 +1,246 @@
+// .blog {
+//     &__image {
+//         margin: 8rem 0;
+//         display: grid;
+//         grid-template-columns: 1fr 1fr;
+//         gap: 3.2rem;
+
+//         &-main {
+//             width: 100%;
+//             opacity: 0;
+//             transform: translateX(-6rem);
+//             animation: blogMainImage 1s ease-out forwards;
+
+//             img {
+//                 border-radius: 1rem;
+//                 width: 95%;
+//                 height: auto;
+//                 display: block;
+
+//                 transition: transform 0.6s ease;
+//             }
+
+//             &:hover img {
+//                 transform: scale(1.03);
+//             }
+//         }
+//     }
+
+//     &__image-box {
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+
+//         img {
+//             border-radius: 1rem;
+//             width: 95%;
+//             display: block;
+//             height: auto;
+//         }
+//     }
+
+//     &__text-new {
+//         display: flex;
+//         align-items: center;
+//         gap: 1.5rem;
+//         border: 2px solid $color-general-6;
+//         border-radius: 1.5rem;
+
+//         opacity: 0;
+//         transform: translateX(6rem);
+
+//         animation: blogCardReveal 0.8s ease-out forwards;
+
+//         transition:
+//             transform 0.35s ease,
+//             box-shadow 0.35s ease,
+//             border-color 0.35s ease;
+
+//         &:hover {
+//             transform: translateX(-0.6rem);
+
+//             box-shadow:
+//                 rgba(0, 0, 0, 0.10) 0px 8px 24px;
+
+//             border-color: $color-primary;
+//         }
+
+//         &:nth-child(1) {
+//             animation-delay: 0.3s;
+//         }
+
+//         &:nth-child(2) {
+//             animation-delay: 0.5s;
+//         }
+
+//         &:nth-child(3) {
+//             animation-delay: 0.7s;
+//         }
+
+//         img {
+//             width: 40%;
+
+//             transition: transform 0.5s ease;
+//         }
+
+//         &:hover img {
+//             transform: scale(1.06);
+//         }
+
+//         &>div {
+//             padding: 1rem;
+//         }
+//     }
+// }
+
+// // ANIMATION
+// @keyframes blogMainImage {
+
+//     0% {
+//         opacity: 0;
+//         transform: translateX(-6rem);
+//     }
+
+//     100% {
+//         opacity: 1;
+//         transform: translateX(0);
+//     }
+// }
+
+// @keyframes blogCardReveal {
+
+//     0% {
+//         opacity: 0;
+//         transform: translateX(6rem);
+//     }
+
+//     100% {
+//         opacity: 1;
+//         transform: translateX(0);
+//     }
+// }
+
+// // MOTION
+// @media (prefers-reduced-motion: reduce) {
+
+//     .blog__image-main,
+//     .blog__text-new {
+//         animation: none;
+//         opacity: 1;
+//         transform: none;
+//     }
+
+//     .blog__image-main img,
+//     .blog__text-new,
+//     .blog__text-new img {
+//         transition: none;
+//     }
+// }
+
+// // RESPONSIVE
+// // TABLET
+// @media (max-width: 56.25em) {
+//     .blog {
+//         &__image {
+//             margin: 6rem 0;
+//             grid-template-columns: 1fr;
+//             gap: 3rem;
+
+//             &-main {
+//                 width: 100%;
+
+//                 img {
+//                     width: 100%;
+//                     height: auto;
+//                     object-fit: cover;
+//                 }
+//             }
+//         }
+
+//         &__image-box {
+//             width: 100%;
+//             gap: 1.5rem;
+//         }
+
+//         &__text-new {
+//             width: 100%;
+//             max-width: 65rem;
+//             gap: 1.5rem;
+
+//             img {
+//                 width: 30%;
+//                 max-width: 18rem;
+//             }
+
+//             &>div {
+//                 padding: 1.2rem;
+//             }
+//         }
+//     }
+// }
+
+// // MOBILE
+// @media (max-width: 37.5em) {
+//     .blog {
+//         &__image {
+//             margin: 4.5rem 1.6rem;
+//             grid-template-columns: 1fr;
+//             gap: 2.5rem;
+
+//             &-main {
+//                 transform: translateX(-3rem);
+
+//                 img {
+//                     width: 100%;
+//                     height: auto;
+//                 }
+//             }
+//         }
+
+//         &__image-box {
+//             width: 100%;
+//             gap: 1.2rem;
+//         }
+
+//         &__text-new {
+//             width: 100%;
+//             gap: 1rem;
+//             border-radius: 1.2rem;
+
+//             img {
+//                 width: 30%;
+//                 max-width: 12rem;
+//             }
+
+//             &>div {
+//                 padding: 0.8rem;
+//             }
+//         }
+//     }
+// }
+
+// // SMALL MOBILE
+// @media (max-width: 25em) {
+//     .blog {
+//         &__image {
+//             margin: 4rem 1rem;
+//             gap: 2rem;
+//         }
+
+//         &__text-new {
+//             gap: 0.8rem;
+
+//             img {
+//                 width: 32%;
+//             }
+
+//             &>div {
+//                 padding: 0.6rem;
+//             }
+//         }
+//     }
+// }
+
 .blog {
     &__image {
         margin: 8rem 0;
@@ -5,15 +248,51 @@
         grid-template-columns: 1fr 1fr;
         gap: 3.2rem;
 
+        // ==============================
+        // MAIN IMAGE
+        // ==============================
+
         &-main {
             width: 100%;
             opacity: 0;
             transform: translateX(-6rem);
+
             animation: blogMainImage 1s ease-out forwards;
 
             img {
-                width: 100%;
+                border-radius: 1rem;
+                width: 95%;
+                height: auto;
                 display: block;
+
+                transition: transform 0.6s ease;
+            }
+
+            &:hover img {
+                transform: scale(1.03);
+            }
+        }
+
+        // ==============================
+        // SECOND IMAGE
+        // ==============================
+
+        &-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            opacity: 0;
+            transform: translateX(6rem);
+
+            // با کمی تأخیر وارد شود
+            animation: blogSecondImage 1s ease-out 0.25s forwards;
+
+            img {
+                border-radius: 1rem;
+                width: 95%;
+                display: block;
+                height: auto;
 
                 transition: transform 0.6s ease;
             }
@@ -24,13 +303,9 @@
         }
     }
 
-    &__image-box {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
-    }
+    // ==============================
+    // YOUR EXISTING TEXT CARDS
+    // ==============================
 
     &__text-new {
         display: flex;
@@ -86,7 +361,11 @@
     }
 }
 
-// ANIMATION
+
+// ==========================================
+// MAIN IMAGE ANIMATION
+// ==========================================
+
 @keyframes blogMainImage {
 
     0% {
@@ -99,6 +378,29 @@
         transform: translateX(0);
     }
 }
+
+
+// ==========================================
+// SECOND IMAGE ANIMATION
+// ==========================================
+
+@keyframes blogSecondImage {
+
+    0% {
+        opacity: 0;
+        transform: translateX(6rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+// ==========================================
+// YOUR EXISTING CARD ANIMATION
+// ==========================================
 
 @keyframes blogCardReveal {
 
@@ -113,10 +415,15 @@
     }
 }
 
+
+// ==========================================
 // MOTION
+// ==========================================
+
 @media (prefers-reduced-motion: reduce) {
 
     .blog__image-main,
+    .blog__image-box,
     .blog__text-new {
         animation: none;
         opacity: 1;
@@ -124,16 +431,22 @@
     }
 
     .blog__image-main img,
+    .blog__image-box img,
     .blog__text-new,
     .blog__text-new img {
         transition: none;
     }
 }
 
-// RESPONSIVE
+
+// ==========================================
 // TABLET
+// ==========================================
+
 @media (max-width: 56.25em) {
+
     .blog {
+
         &__image {
             margin: 6rem 0;
             grid-template-columns: 1fr;
@@ -141,6 +454,15 @@
 
             &-main {
                 width: 100%;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                    object-fit: cover;
+                }
+            }
+
+            &-box {
 
                 img {
                     width: 100%;
@@ -172,9 +494,15 @@
     }
 }
 
+
+// ==========================================
 // MOBILE
+// ==========================================
+
 @media (max-width: 37.5em) {
+
     .blog {
+
         &__image {
             margin: 4.5rem 1.6rem;
             grid-template-columns: 1fr;
@@ -182,6 +510,15 @@
 
             &-main {
                 transform: translateX(-3rem);
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            &-box {
+                transform: translateX(3rem);
 
                 img {
                     width: 100%;
@@ -212,7 +549,6 @@
     }
 }
 
-// SMALL MOBILE
 @media (max-width: 25em) {
     .blog {
         &__image {
