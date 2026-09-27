@@ -1,5 +1,4 @@
 .about-section {
-    width: 100%;
     max-width: 130rem;
     margin: 0 auto;
     padding: 0 2rem;
@@ -18,8 +17,7 @@
     }
 
     &__img-box {
-        width: 100%;
-        overflow: hidden;
+        // overflow: hidden;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -58,17 +56,26 @@
     }
 
     .about {
+        display: flex;
+        flex-direction: column;
+
         &__top {
-            margin-bottom: -6rem;
+            margin-bottom: -5rem;
+            text-align: center;
+
+            &-top-box {
+                margin: top 2rem;
+            }
         }
 
-        img {
+        &__img-box {
             width: 100%;
+            margin: 6rem 0;
+        }
+
+        &__img {
+            width: 90%;
         }
     }
 
-    .about__img-box {
-        aspect-ratio: 4 / 3;
-        border-radius: 0.8rem;
-    }
 }

@@ -31,7 +31,6 @@
 // }
 
 .story-section {
-    width: 100%;
     max-width: 130rem;
     margin: 0 auto;
     padding: 0 2rem;
@@ -92,7 +91,9 @@
         grid-template-columns: 1fr;
 
         &__img-box {
-            max-height: 45rem;
+            img {
+                width: 95%;
+            }
         }
 
         &__text-box {
@@ -112,13 +113,17 @@
     }
 
     .story {
-        padding: 5rem 0;
+        width: 90%;
+        padding: 5rem 2rem;
 
         &__img-box {
-            max-height: 30rem;
+            img {
+                width: 95%;
+            }
         }
 
         &__text-box {
+            width: 90%;
             padding: 3rem 0;
             gap: 1.6rem;
         }
