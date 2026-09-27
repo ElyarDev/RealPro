@@ -739,13 +739,12 @@ body {
   .about {
     display: flex;
     flex-direction: column;
+    justify-content: center;
   }
   .about__top {
+    text-align: center;
     margin-bottom: -5rem;
     text-align: center;
-  }
-  .about__top-top-box {
-    margin: top 2rem;
   }
   .about__img-box {
     width: 100%;

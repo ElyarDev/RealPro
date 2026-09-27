@@ -159,6 +159,8 @@
     }
 }
 
+// RESPONSIVE
+// TABLET
 @media (max-width: 56.25em) {
     .blog {
         &__image {
@@ -208,6 +210,7 @@
     }
 }
 
+// MOBILE 
 @media (max-width: 37.5em) {
     .blog {
         &__image {
@@ -256,6 +259,7 @@
     }
 }
 
+// SMALL MOBILE
 @media (max-width: 25em) {
     .blog {
         &__image {
