@@ -706,6 +706,8 @@ body {
 }
 .about__top span {
   width: 90%;
+  margin: 0 auto;
+  display: block;
   font-size: 1.6rem;
 }
 .about__img-box {
@@ -725,9 +727,6 @@ body {
 }
 
 @media (max-width: 56.25em) {
-  .about__top {
-    width: 90%;
-  }
   .about__img-box {
     width: 90%;
   }
@@ -742,9 +741,7 @@ body {
     justify-content: center;
   }
   .about__top {
-    text-align: center;
     margin-bottom: -5rem;
-    text-align: center;
   }
   .about__img-box {
     width: 100%;
@@ -835,20 +832,30 @@ body {
 .team-section {
   max-width: 130rem;
   margin: 0 auto;
+  padding: 0 3rem;
 }
 
 .team {
   max-width: 100rem;
-  padding: 3rem 0;
+  margin: 0 auto;
+  padding: 5rem 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  margin: 0 auto;
+  gap: 4rem;
 }
 .team > * {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .team__img {
   width: 80%;
+  max-width: 28rem;
+  display: block;
+  margin: 0 auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media (max-width: 56.25em) {
@@ -856,14 +863,20 @@ body {
     padding: 0 3rem;
   }
   .team {
-    padding: 2.5rem 0;
-    grid-template-columns: 1fr;
-    justify-items: center;
-    gap: 2.5rem;
+    max-width: 70rem;
+    padding: 4rem 0;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem 3rem;
   }
   .team > * {
     width: 100%;
-    max-width: 40rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .team__img {
+    width: 75%;
+    max-width: 26rem;
   }
 }
 @media (max-width: 37.5em) {
@@ -871,14 +884,32 @@ body {
     padding: 0 1.6rem;
   }
   .team {
-    padding: 2rem 0;
+    max-width: 45rem;
+    padding: 3.5rem 0;
     grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+  .team > * {
+    width: 100%;
+    justify-content: center;
+  }
+  .team__img {
+    width: 70%;
+    max-width: 25rem;
+    margin: 0 auto;
   }
 }
 @media (max-width: 25em) {
+  .team-section {
+    padding: 0 1.2rem;
+  }
   .team {
-    padding: 1.5rem 0;
-    gap: 2.5rem;
+    padding: 2.5rem 0;
+    gap: 3rem;
+  }
+  .team__img {
+    width: 75%;
+    max-width: 22rem;
   }
 }
 .vision-section {
@@ -2910,8 +2941,13 @@ body.page-loaded .hero__glow {
   align-items: center;
 }
 .shop__item__img {
-  width: 90%;
-  height: 90%;
+  width: 55%;
+  height: 55%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 1rem;
 }
 .shop__item__title {
   display: block;
