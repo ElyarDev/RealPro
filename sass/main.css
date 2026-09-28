@@ -2911,6 +2911,7 @@ body.page-loaded .hero__glow {
 }
 .shop__item__img {
   width: 90%;
+  height: 90%;
 }
 .shop__item__title {
   display: block;
