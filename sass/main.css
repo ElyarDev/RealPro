@@ -3820,6 +3820,7 @@ body.page-loaded .hero__glow {
   display: grid;
   grid-template-columns: 1fr 40rem;
   gap: 7rem;
+  align-items: start;
 }
 .cart__order {
   padding: 3rem;
